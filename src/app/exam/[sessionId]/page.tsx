@@ -35,12 +35,14 @@ export default function ExamPlayer({ params }: { params: Promise<{ sessionId: st
 
   const chapterGroups = useMemo(() => {
     if (!session) return [];
-    const groups: { name: string, startIndex: number, endIndex: number, questions: { id: string, globalIndex: number }[] }[] = [];
+    type ChapterGroup = { name: string, startIndex: number, endIndex: number, questions: { id: string, globalIndex: number }[] };
+    const groups: ChapterGroup[] = [];
     
     let currentChapter = "";
-    let currentGroup = null;
+    let currentGroup: ChapterGroup | null = null;
 
-    session.questions.forEach((q, idx) => {
+    for (let idx = 0; idx < session.questions.length; idx++) {
+      const q = session.questions[idx];
       const ch = q.chapter || "Không có chủ đề";
       if (ch !== currentChapter) {
         if (currentGroup) {
@@ -58,7 +60,7 @@ export default function ExamPlayer({ params }: { params: Promise<{ sessionId: st
       if (currentGroup) {
         currentGroup.questions.push({ id: q.id, globalIndex: idx });
       }
-    });
+    }
 
     if (currentGroup) {
       currentGroup.endIndex = session.questions.length - 1;
