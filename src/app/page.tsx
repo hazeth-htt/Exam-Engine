@@ -16,6 +16,21 @@ export default function Home() {
 
   const loadBanks = async () => {
     setLoading(true);
+
+    try {
+      const res = await fetch('/api/banks');
+      if (res.ok) {
+        const defaultBanks = await res.json();
+        for (const bank of defaultBanks) {
+          if (bank && bank.id) {
+            await storage.saveQuestionBank(bank);
+          }
+        }
+      }
+    } catch(e) {
+      console.error("Failed to sync default banks", e);
+    }
+
     const data = await storage.getQuestionBanks();
     setBanks(data);
     setLoading(false);
