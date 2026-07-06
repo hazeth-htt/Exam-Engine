@@ -8,26 +8,26 @@
     {
       "id": "tpl_seq",
       "name": "Ôn tập theo chủ đề (Giữ thứ tự gốc)",
-      "description": "Làm tất cả 55 câu hỏi, giữ đúng thứ tự trong file",
+      "description": "Làm tất cả 56 câu hỏi, giữ đúng thứ tự trong file",
       "shuffleQuestions": false,
       "shuffleAnswers": false,
       "rules": [
         {
           "type": "default",
-          "count": 55
+          "count": 56
         }
       ]
     },
     {
       "id": "tpl_rnd",
       "name": "Kiểm tra toàn bộ (Xáo trộn)",
-      "description": "Làm tất cả 55 câu hỏi, xáo trộn thứ tự",
+      "description": "Làm tất cả 56 câu hỏi, xáo trộn thứ tự",
       "shuffleQuestions": true,
       "shuffleAnswers": true,
       "rules": [
         {
           "type": "default",
-          "count": 55
+          "count": 56
         }
       ]
     },
@@ -171,25 +171,33 @@
       "type": "default",
       "difficulty": 1,
       "chapter": "04_9.1 情報セキュリティ(2)",
-      "question": "⑤コンピュータ犯罪の手口の一つであるサラミ法はどれか。\nディレクトリトラバーサル攻撃に該当するものはどれか。",
+      "question": "⑤コンピュータ犯罪の手口の一つであるサラミ法はどれか。",
       "choices": [
         "回線の一部に秘密にアクセスして他人のパスワードやIDを盗み出してデータを盗用する方法である。",
         "ネットワークを介して送受信されている音声やデータを不正に盗聴する方法である。",
         "不正行為が表面化しない程度に、多数の資産から少しずつ詐取する方法である。",
-        "プログラム実行後のコンピュータ内部又はその周囲に残っている情報をひそかに探索して，必要情報を入手する方法である。",
+        "プログラム実行後のコンピュータ内部又はその周囲に残っている情報をひそかに探索して，必要情報を入手する方法である。"
+      ],
+      "answer": "不正行為が表面化しない程度に、多数の資産から少しずつ詐取する方法である。",
+      "explanation": ""
+    },
+    {
+      "id": "q10",
+      "type": "default",
+      "difficulty": 1,
+      "chapter": "04_9.1 情報セキュリティ(2)",
+      "question": "ディレクトリトラバーサル攻撃に該当するものはどれか。",
+      "choices": [
         "Webアプリケーションの入力データとしてデータベースへの命令文を構成するデータを入力し、想定外のSQL文を実行する。",
         "Webサイトに利用者を誘導して、Webサイトの入力データ処理の欠陥を悪用し、利用者のブラウザで悪意のあるスクリプトを実行する。",
         "サーバ内の想定外のファイル名を直接入力することによって、本来は許されないファイルを不正に閲覧する。",
         "セッションIDによってセッションが管理されるとき、ログイン中の利用者のセッションIDを不正に取得し、その利用者に成りすましてアクセスする。"
       ],
-      "answer": [
-        "不正行為が表面化しない程度に、多数の資産から少しずつ詐取する方法である。",
-        "サーバ内の想定外のファイル名を直接入力することによって、本来は許されないファイルを不正に閲覧する。"
-      ],
+      "answer": "サーバ内の想定外のファイル名を直接入力することによって、本来は許されないファイルを不正に閲覧する。",
       "explanation": ""
     },
     {
-      "id": "q10",
+      "id": "q11",
       "type": "default",
       "difficulty": 1,
       "chapter": "05_9.1 情報セキュリティ(3)",
@@ -204,7 +212,7 @@
       "explanation": ""
     },
     {
-      "id": "q11",
+      "id": "q12",
       "type": "default",
       "difficulty": 1,
       "chapter": "05_9.1 情報セキュリティ(3)",
@@ -219,7 +227,7 @@
       "explanation": ""
     },
     {
-      "id": "q12",
+      "id": "q13",
       "type": "default",
       "difficulty": 1,
       "chapter": "05_9.1 情報セキュリティ(3)",
@@ -234,7 +242,7 @@
       "explanation": ""
     },
     {
-      "id": "q13",
+      "id": "q14",
       "type": "default",
       "difficulty": 1,
       "chapter": "05_9.1 情報セキュリティ(3)",
@@ -253,7 +261,7 @@
       "explanation": ""
     },
     {
-      "id": "q14",
+      "id": "q15",
       "type": "default",
       "difficulty": 1,
       "chapter": "05_9.1 情報セキュリティ(3)",
@@ -268,7 +276,7 @@
       "explanation": ""
     },
     {
-      "id": "q15",
+      "id": "q16",
       "type": "default",
       "difficulty": 1,
       "chapter": "05_9.1 情報セキュリティ(3)",
@@ -283,7 +291,7 @@
       "explanation": ""
     },
     {
-      "id": "q16",
+      "id": "q17",
       "type": "default",
       "difficulty": 1,
       "chapter": "06_9.2 コンピュータウイルス(1)",
@@ -298,7 +306,7 @@
       "explanation": ""
     },
     {
-      "id": "q17",
+      "id": "q18",
       "type": "default",
       "difficulty": 1,
       "chapter": "06_9.2 コンピュータウイルス(1)",
@@ -313,7 +321,7 @@
       "explanation": ""
     },
     {
-      "id": "q18",
+      "id": "q19",
       "type": "default",
       "difficulty": 1,
       "chapter": "06_9.2 コンピュータウイルス(1)",
@@ -328,7 +336,7 @@
       "explanation": ""
     },
     {
-      "id": "q19",
+      "id": "q20",
       "type": "default",
       "difficulty": 1,
       "chapter": "06_9.2 コンピュータウイルス(1)",
@@ -343,7 +351,7 @@
       "explanation": ""
     },
     {
-      "id": "q20",
+      "id": "q21",
       "type": "default",
       "difficulty": 1,
       "chapter": "07_9.2 コンピュータウイルス(2)",
@@ -358,7 +366,7 @@
       "explanation": ""
     },
     {
-      "id": "q21",
+      "id": "q22",
       "type": "default",
       "difficulty": 1,
       "chapter": "07_9.2 コンピュータウイルス(2)",
@@ -373,7 +381,7 @@
       "explanation": ""
     },
     {
-      "id": "q22",
+      "id": "q23",
       "type": "default",
       "difficulty": 1,
       "chapter": "07_9.2 コンピュータウイルス(2)",
@@ -388,7 +396,7 @@
       "explanation": ""
     },
     {
-      "id": "q23",
+      "id": "q24",
       "type": "default",
       "difficulty": 1,
       "chapter": "07_9.2 コンピュータウイルス(2)",
@@ -403,7 +411,7 @@
       "explanation": ""
     },
     {
-      "id": "q24",
+      "id": "q25",
       "type": "default",
       "difficulty": 1,
       "chapter": "07_9.2 コンピュータウイルス(2)",
@@ -418,7 +426,7 @@
       "explanation": ""
     },
     {
-      "id": "q25",
+      "id": "q26",
       "type": "default",
       "difficulty": 1,
       "chapter": "08_9.3 暗号化と認証(1)",
@@ -433,7 +441,7 @@
       "explanation": ""
     },
     {
-      "id": "q26",
+      "id": "q27",
       "type": "default",
       "difficulty": 1,
       "chapter": "08_9.3 暗号化と認証(1)",
@@ -448,7 +456,7 @@
       "explanation": ""
     },
     {
-      "id": "q27",
+      "id": "q28",
       "type": "default",
       "difficulty": 1,
       "chapter": "08_9.3 暗号化と認証(1)",
@@ -463,7 +471,7 @@
       "explanation": ""
     },
     {
-      "id": "q28",
+      "id": "q29",
       "type": "default",
       "difficulty": 1,
       "chapter": "08_9.3 暗号化と認証(1)",
@@ -478,7 +486,7 @@
       "explanation": ""
     },
     {
-      "id": "q29",
+      "id": "q30",
       "type": "default",
       "difficulty": 1,
       "chapter": "09_9.3 暗号化と認証(2)",
@@ -493,7 +501,7 @@
       "explanation": ""
     },
     {
-      "id": "q30",
+      "id": "q31",
       "type": "default",
       "difficulty": 1,
       "chapter": "09_9.3 暗号化と認証(2)",
@@ -508,7 +516,7 @@
       "explanation": ""
     },
     {
-      "id": "q31",
+      "id": "q32",
       "type": "default",
       "difficulty": 1,
       "chapter": "09_9.3 暗号化と認証(2)",
@@ -523,7 +531,7 @@
       "explanation": ""
     },
     {
-      "id": "q32",
+      "id": "q33",
       "type": "default",
       "difficulty": 1,
       "chapter": "09_9.3 暗号化と認証(2)",
@@ -538,7 +546,7 @@
       "explanation": ""
     },
     {
-      "id": "q33",
+      "id": "q34",
       "type": "default",
       "difficulty": 1,
       "chapter": "10_9.4 ネットワークセキュリティ(1)",
@@ -553,7 +561,7 @@
       "explanation": ""
     },
     {
-      "id": "q34",
+      "id": "q35",
       "type": "default",
       "difficulty": 1,
       "chapter": "10_9.4 ネットワークセキュリティ(1)",
@@ -568,7 +576,7 @@
       "explanation": ""
     },
     {
-      "id": "q35",
+      "id": "q36",
       "type": "default",
       "difficulty": 1,
       "chapter": "10_9.4 ネットワークセキュリティ(1)",
@@ -583,7 +591,7 @@
       "explanation": ""
     },
     {
-      "id": "q36",
+      "id": "q37",
       "type": "default",
       "difficulty": 1,
       "chapter": "10_9.4 ネットワークセキュリティ(1)",
@@ -598,7 +606,7 @@
       "explanation": ""
     },
     {
-      "id": "q37",
+      "id": "q38",
       "type": "default",
       "difficulty": 1,
       "chapter": "11_9.4 ネットワークセキュリティ(2)",
@@ -613,7 +621,7 @@
       "explanation": ""
     },
     {
-      "id": "q38",
+      "id": "q39",
       "type": "default",
       "difficulty": 1,
       "chapter": "11_9.4 ネットワークセキュリティ(2)",
@@ -628,7 +636,7 @@
       "explanation": ""
     },
     {
-      "id": "q39",
+      "id": "q40",
       "type": "default",
       "difficulty": 1,
       "chapter": "11_9.4 ネットワークセキュリティ(2)",
@@ -643,7 +651,7 @@
       "explanation": ""
     },
     {
-      "id": "q40",
+      "id": "q41",
       "type": "default",
       "difficulty": 1,
       "chapter": "11_9.4 ネットワークセキュリティ(2)",
@@ -658,7 +666,7 @@
       "explanation": ""
     },
     {
-      "id": "q41",
+      "id": "q42",
       "type": "default",
       "difficulty": 1,
       "chapter": "11_9.4 ネットワークセキュリティ(2)",
@@ -673,7 +681,7 @@
       "explanation": ""
     },
     {
-      "id": "q42",
+      "id": "q43",
       "type": "default",
       "difficulty": 1,
       "chapter": "12_AI01 人工知能とは(1)",
@@ -688,7 +696,7 @@
       "explanation": ""
     },
     {
-      "id": "q43",
+      "id": "q44",
       "type": "default",
       "difficulty": 1,
       "chapter": "12_AI01 人工知能とは(1)",
@@ -703,7 +711,7 @@
       "explanation": ""
     },
     {
-      "id": "q44",
+      "id": "q45",
       "type": "default",
       "difficulty": 1,
       "chapter": "12_AI01 人工知能とは(1)",
@@ -718,7 +726,7 @@
       "explanation": ""
     },
     {
-      "id": "q45",
+      "id": "q46",
       "type": "default",
       "difficulty": 1,
       "chapter": "12_AI01 人工知能とは(1)",
@@ -733,7 +741,7 @@
       "explanation": ""
     },
     {
-      "id": "q46",
+      "id": "q47",
       "type": "default",
       "difficulty": 1,
       "chapter": "13_AI01 人工知能とは(2)",
@@ -748,7 +756,7 @@
       "explanation": ""
     },
     {
-      "id": "q47",
+      "id": "q48",
       "type": "default",
       "difficulty": 1,
       "chapter": "13_AI01 人工知能とは(2)",
@@ -763,7 +771,7 @@
       "explanation": ""
     },
     {
-      "id": "q48",
+      "id": "q49",
       "type": "default",
       "difficulty": 1,
       "chapter": "13_AI01 人工知能とは(2)",
@@ -778,7 +786,7 @@
       "explanation": ""
     },
     {
-      "id": "q49",
+      "id": "q50",
       "type": "default",
       "difficulty": 1,
       "chapter": "13_AI01 人工知能とは(2)",
@@ -793,7 +801,7 @@
       "explanation": ""
     },
     {
-      "id": "q50",
+      "id": "q51",
       "type": "default",
       "difficulty": 1,
       "chapter": "14_AI-02 機械学習（ML）とは(1)",
@@ -808,7 +816,7 @@
       "explanation": ""
     },
     {
-      "id": "q51",
+      "id": "q52",
       "type": "default",
       "difficulty": 1,
       "chapter": "14_AI-02 機械学習（ML）とは(1)",
@@ -823,7 +831,7 @@
       "explanation": ""
     },
     {
-      "id": "q52",
+      "id": "q53",
       "type": "default",
       "difficulty": 1,
       "chapter": "14_AI-02 機械学習（ML）とは(1)",
@@ -838,7 +846,7 @@
       "explanation": ""
     },
     {
-      "id": "q53",
+      "id": "q54",
       "type": "default",
       "difficulty": 1,
       "chapter": "15_AI-02 機械学習（ML）とは(2)",
@@ -853,7 +861,7 @@
       "explanation": ""
     },
     {
-      "id": "q54",
+      "id": "q55",
       "type": "default",
       "difficulty": 1,
       "chapter": "15_AI-02 機械学習（ML）とは(2)",
@@ -866,7 +874,7 @@
       "explanation": ""
     },
     {
-      "id": "q55",
+      "id": "q56",
       "type": "default",
       "difficulty": 1,
       "chapter": "15_AI-02 機械学習（ML）とは(2)",
