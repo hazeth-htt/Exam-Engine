@@ -30,7 +30,10 @@ export const generateExamSession = (
   const usedQuestionIds = new Set<string>();
 
   for (const rule of template.rules) {
-    const matchingQuestions = bank.questions.filter((q) => q.type === rule.type);
+    let matchingQuestions = bank.questions.filter((q) => q.type === rule.type || rule.type === 'all');
+    if (rule.chapter) {
+      matchingQuestions = matchingQuestions.filter(q => q.chapter === rule.chapter);
+    }
     const availableQuestions = matchingQuestions.filter((q) => !usedQuestionIds.has(q.id));
 
     if (availableQuestions.length < rule.count) {

@@ -12,6 +12,7 @@ export interface Question {
 export interface ExamRule {
   type: string;
   count: number;
+  chapter?: string;
 }
 
 export interface ExamTemplate {

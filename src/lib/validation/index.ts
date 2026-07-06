@@ -16,6 +16,7 @@ export const QuestionSchema = z.object({
 export const ExamRuleSchema = z.object({
   type: z.string(),
   count: z.number().positive(),
+  chapter: z.string().optional(),
 });
 
 export const ExamTemplateSchema = z.object({

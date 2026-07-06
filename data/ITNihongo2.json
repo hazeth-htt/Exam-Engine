@@ -43,6 +43,188 @@
           "count": 20
         }
       ]
+    },
+    {
+      "id": "tpl_chap_0",
+      "name": "Chủ đề: 03_9.1 情報セキュリティ(1)",
+      "description": "Luyện tập 4 câu hỏi",
+      "shuffleQuestions": false,
+      "shuffleAnswers": false,
+      "rules": [
+        {
+          "type": "default",
+          "count": 4,
+          "chapter": "03_9.1 情報セキュリティ(1)"
+        }
+      ]
+    },
+    {
+      "id": "tpl_chap_1",
+      "name": "Chủ đề: 04_9.1 情報セキュリティ(2)",
+      "description": "Luyện tập 6 câu hỏi",
+      "shuffleQuestions": false,
+      "shuffleAnswers": false,
+      "rules": [
+        {
+          "type": "default",
+          "count": 6,
+          "chapter": "04_9.1 情報セキュリティ(2)"
+        }
+      ]
+    },
+    {
+      "id": "tpl_chap_2",
+      "name": "Chủ đề: 05_9.1 情報セキュリティ(3)",
+      "description": "Luyện tập 6 câu hỏi",
+      "shuffleQuestions": false,
+      "shuffleAnswers": false,
+      "rules": [
+        {
+          "type": "default",
+          "count": 6,
+          "chapter": "05_9.1 情報セキュリティ(3)"
+        }
+      ]
+    },
+    {
+      "id": "tpl_chap_3",
+      "name": "Chủ đề: 06_9.2 コンピュータウイルス(1)",
+      "description": "Luyện tập 4 câu hỏi",
+      "shuffleQuestions": false,
+      "shuffleAnswers": false,
+      "rules": [
+        {
+          "type": "default",
+          "count": 4,
+          "chapter": "06_9.2 コンピュータウイルス(1)"
+        }
+      ]
+    },
+    {
+      "id": "tpl_chap_4",
+      "name": "Chủ đề: 07_9.2 コンピュータウイルス(2)",
+      "description": "Luyện tập 5 câu hỏi",
+      "shuffleQuestions": false,
+      "shuffleAnswers": false,
+      "rules": [
+        {
+          "type": "default",
+          "count": 5,
+          "chapter": "07_9.2 コンピュータウイルス(2)"
+        }
+      ]
+    },
+    {
+      "id": "tpl_chap_5",
+      "name": "Chủ đề: 08_9.3 暗号化と認証(1)",
+      "description": "Luyện tập 4 câu hỏi",
+      "shuffleQuestions": false,
+      "shuffleAnswers": false,
+      "rules": [
+        {
+          "type": "default",
+          "count": 4,
+          "chapter": "08_9.3 暗号化と認証(1)"
+        }
+      ]
+    },
+    {
+      "id": "tpl_chap_6",
+      "name": "Chủ đề: 09_9.3 暗号化と認証(2)",
+      "description": "Luyện tập 4 câu hỏi",
+      "shuffleQuestions": false,
+      "shuffleAnswers": false,
+      "rules": [
+        {
+          "type": "default",
+          "count": 4,
+          "chapter": "09_9.3 暗号化と認証(2)"
+        }
+      ]
+    },
+    {
+      "id": "tpl_chap_7",
+      "name": "Chủ đề: 10_9.4 ネットワークセキュリティ(1)",
+      "description": "Luyện tập 4 câu hỏi",
+      "shuffleQuestions": false,
+      "shuffleAnswers": false,
+      "rules": [
+        {
+          "type": "default",
+          "count": 4,
+          "chapter": "10_9.4 ネットワークセキュリティ(1)"
+        }
+      ]
+    },
+    {
+      "id": "tpl_chap_8",
+      "name": "Chủ đề: 11_9.4 ネットワークセキュリティ(2)",
+      "description": "Luyện tập 5 câu hỏi",
+      "shuffleQuestions": false,
+      "shuffleAnswers": false,
+      "rules": [
+        {
+          "type": "default",
+          "count": 5,
+          "chapter": "11_9.4 ネットワークセキュリティ(2)"
+        }
+      ]
+    },
+    {
+      "id": "tpl_chap_9",
+      "name": "Chủ đề: 12_AI01 人工知能とは(1)",
+      "description": "Luyện tập 4 câu hỏi",
+      "shuffleQuestions": false,
+      "shuffleAnswers": false,
+      "rules": [
+        {
+          "type": "default",
+          "count": 4,
+          "chapter": "12_AI01 人工知能とは(1)"
+        }
+      ]
+    },
+    {
+      "id": "tpl_chap_10",
+      "name": "Chủ đề: 13_AI01 人工知能とは(2)",
+      "description": "Luyện tập 4 câu hỏi",
+      "shuffleQuestions": false,
+      "shuffleAnswers": false,
+      "rules": [
+        {
+          "type": "default",
+          "count": 4,
+          "chapter": "13_AI01 人工知能とは(2)"
+        }
+      ]
+    },
+    {
+      "id": "tpl_chap_11",
+      "name": "Chủ đề: 14_AI-02 機械学習（ML）とは(1)",
+      "description": "Luyện tập 3 câu hỏi",
+      "shuffleQuestions": false,
+      "shuffleAnswers": false,
+      "rules": [
+        {
+          "type": "default",
+          "count": 3,
+          "chapter": "14_AI-02 機械学習（ML）とは(1)"
+        }
+      ]
+    },
+    {
+      "id": "tpl_chap_12",
+      "name": "Chủ đề: 15_AI-02 機械学習（ML）とは(2)",
+      "description": "Luyện tập 3 câu hỏi",
+      "shuffleQuestions": false,
+      "shuffleAnswers": false,
+      "rules": [
+        {
+          "type": "default",
+          "count": 3,
+          "chapter": "15_AI-02 機械学習（ML）とは(2)"
+        }
+      ]
     }
   ],
   "questions": [
