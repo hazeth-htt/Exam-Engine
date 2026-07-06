@@ -25,7 +25,7 @@ export function BankImporter({ onImported }: { onImported?: () => void }) {
       
       const parseResult = QuestionBankSchema.safeParse(json);
       if (!parseResult.success) {
-        throw new Error("Cấu trúc JSON không hợp lệ. " + parseResult.error.errors[0].message);
+        throw new Error("Cấu trúc JSON không hợp lệ. " + parseResult.error.issues[0].message);
       }
 
       const bankData = parseResult.data;
