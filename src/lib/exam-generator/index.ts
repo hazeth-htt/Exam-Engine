@@ -39,8 +39,12 @@ export const generateExamSession = (
       );
     }
 
-    const shuffledAvailable = shuffleArray(availableQuestions);
-    const picked = shuffledAvailable.slice(0, rule.count);
+    let picked: Question[];
+    if (template.shuffleQuestions) {
+      picked = shuffleArray(availableQuestions).slice(0, rule.count);
+    } else {
+      picked = availableQuestions.slice(0, rule.count);
+    }
 
     for (const q of picked) {
       usedQuestionIds.add(q.id);
