@@ -1,5 +1,5 @@
 import { openDB, DBSchema, IDBPDatabase } from 'idb';
-import { QuestionBank, ExamSession } from '@/types';
+import { QuestionBank, ExamSession, FlashcardDeck } from '@/types';
 
 interface ExamEngineDB extends DBSchema {
   questionBanks: {
@@ -10,15 +10,19 @@ interface ExamEngineDB extends DBSchema {
     key: string;
     value: ExamSession;
   };
+  flashcardDecks: {
+    key: string;
+    value: FlashcardDeck;
+  };
 }
 
 const DB_NAME = 'exam-engine-db';
-const DB_VERSION = 1;
+const DB_VERSION = 2; // Bumped version for new store
 
 let dbPromise: Promise<IDBPDatabase<ExamEngineDB>> | null = null;
 
 const getDB = () => {
-  if (typeof window === 'undefined') return null; // Avoid running on SSR
+  if (typeof window === 'undefined') return null;
   
   if (!dbPromise) {
     dbPromise = openDB<ExamEngineDB>(DB_NAME, DB_VERSION, {
@@ -28,6 +32,9 @@ const getDB = () => {
         }
         if (!db.objectStoreNames.contains('examSessions')) {
           db.createObjectStore('examSessions', { keyPath: 'id' });
+        }
+        if (!db.objectStoreNames.contains('flashcardDecks')) {
+          db.createObjectStore('flashcardDecks', { keyPath: 'id' });
         }
       },
     });
@@ -84,5 +91,30 @@ export const storage = {
     const db = await getDB();
     if (!db) return;
     await db.delete('examSessions', id);
+  },
+
+  // Flashcards
+  async getFlashcardDecks(): Promise<FlashcardDeck[]> {
+    const db = await getDB();
+    if (!db) return [];
+    return db.getAll('flashcardDecks');
+  },
+  
+  async getFlashcardDeck(id: string): Promise<FlashcardDeck | undefined> {
+    const db = await getDB();
+    if (!db) return undefined;
+    return db.get('flashcardDecks', id);
+  },
+  
+  async saveFlashcardDeck(deck: FlashcardDeck): Promise<void> {
+    const db = await getDB();
+    if (!db) return;
+    await db.put('flashcardDecks', deck);
+  },
+  
+  async deleteFlashcardDeck(id: string): Promise<void> {
+    const db = await getDB();
+    if (!db) return;
+    await db.delete('flashcardDecks', id);
   }
 };

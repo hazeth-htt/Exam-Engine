@@ -48,3 +48,26 @@ export interface ExamSession {
   userAnswers: Record<string, string | string[]>;
   status: 'in-progress' | 'completed';
 }
+
+// Flashcard types
+export interface Flashcard {
+  id: string;
+  front: {
+    kanji: string;
+    hiragana?: string;
+  };
+  back: {
+    meaning: string;
+  };
+}
+
+export interface FlashcardDeck {
+  id: string;
+  metadata: {
+    title: string;
+    description: string;
+    version: string;
+    createdAt: number;
+  };
+  cards: Flashcard[];
+}

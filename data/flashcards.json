@@ -1,0 +1,433 @@
+[
+  {
+    "id": "deck-it-basic",
+    "metadata": {
+      "title": "Từ vựng IT cơ bản",
+      "description": "Tổng hợp từ vựng IT chuyên ngành (42 từ)",
+      "version": "1.0",
+      "createdAt": 1783370870081
+    },
+    "cards": [
+      {
+        "id": "card_9962061d-ae32-44c4-aa1a-6688fce77766",
+        "front": {
+          "kanji": "情報",
+          "hiragana": "じょうほう"
+        },
+        "back": {
+          "meaning": "thông tin"
+        }
+      },
+      {
+        "id": "card_871f6f42-308d-470a-8329-f8a90bcef600",
+        "front": {
+          "kanji": "情報セキュリティ",
+          "hiragana": "じょうほうセキュリティ"
+        },
+        "back": {
+          "meaning": "an toàn thông tin"
+        }
+      },
+      {
+        "id": "card_b7dc48be-be87-4009-8464-2d0c730a030c",
+        "front": {
+          "kanji": "可用性",
+          "hiragana": "かようせい"
+        },
+        "back": {
+          "meaning": "tính sẵn sàng"
+        }
+      },
+      {
+        "id": "card_9cfe66d0-d3f9-435c-9329-581e3d94ae4b",
+        "front": {
+          "kanji": "認められた",
+          "hiragana": "みとめられた"
+        },
+        "back": {
+          "meaning": "được cho phép"
+        }
+      },
+      {
+        "id": "card_9b4c8eb9-1c1a-43fd-89b7-c93ef146ce65",
+        "front": {
+          "kanji": "利用者",
+          "hiragana": "りようしゃ"
+        },
+        "back": {
+          "meaning": "người dùng"
+        }
+      },
+      {
+        "id": "card_37ab2888-3f2c-4fcd-a4fa-ca7283c1cde6",
+        "front": {
+          "kanji": "アクセス",
+          "hiragana": "アクセス"
+        },
+        "back": {
+          "meaning": "truy cập"
+        }
+      },
+      {
+        "id": "card_3583157b-7026-4b9e-a02d-baf8dc24370d",
+        "front": {
+          "kanji": "入力者",
+          "hiragana": "にゅうりょくしゃ"
+        },
+        "back": {
+          "meaning": "người nhập"
+        }
+      },
+      {
+        "id": "card_2358a88d-adaa-41cc-9dd5-d30b1c86fc30",
+        "front": {
+          "kanji": "改ざん",
+          "hiragana": "かいざん"
+        },
+        "back": {
+          "meaning": "sửa đổi trái phép"
+        }
+      },
+      {
+        "id": "card_a3e9a9df-87a2-4362-9e23-b681c0b00d4c",
+        "front": {
+          "kanji": "物理的脅威",
+          "hiragana": "ぶつりてききょうい"
+        },
+        "back": {
+          "meaning": "đe dọa vật lý"
+        }
+      },
+      {
+        "id": "card_4a585106-648b-41e2-b2f8-7fa51e837df9",
+        "front": {
+          "kanji": "災害",
+          "hiragana": "さいがい"
+        },
+        "back": {
+          "meaning": "thiên tai"
+        }
+      },
+      {
+        "id": "card_85c46221-ff38-4f41-aec7-adef8f1bfc0d",
+        "front": {
+          "kanji": "DNSキャッシュポイズニング",
+          "hiragana": "DNSキャッシュポイズニング"
+        },
+        "back": {
+          "meaning": "DNS cache poisoning"
+        }
+      },
+      {
+        "id": "card_aac3b6bd-8651-40de-8a24-d5459718ce55",
+        "front": {
+          "kanji": "ディレクトリトラバーサル",
+          "hiragana": "ディレクトリトラバーサル"
+        },
+        "back": {
+          "meaning": "directory traversal"
+        }
+      },
+      {
+        "id": "card_0301acd6-67ba-4763-b675-8196e29c48c9",
+        "front": {
+          "kanji": "リスク回避",
+          "hiragana": "リスクかいひ"
+        },
+        "back": {
+          "meaning": "né tránh rủi ro"
+        }
+      },
+      {
+        "id": "card_c2ac009d-4186-4beb-b2fc-30f94fd4dc2e",
+        "front": {
+          "kanji": "リスク移転",
+          "hiragana": "リスクいてん"
+        },
+        "back": {
+          "meaning": "chuyển giao rủi ro"
+        }
+      },
+      {
+        "id": "card_17747d1c-128c-46ed-992f-c6c343d540b3",
+        "front": {
+          "kanji": "ペネトレーションテスト",
+          "hiragana": "ペネトレーションテスト"
+        },
+        "back": {
+          "meaning": "kiểm thử xâm nhập"
+        }
+      },
+      {
+        "id": "card_35fb71d1-cf77-4559-ba06-90e3990d88c1",
+        "front": {
+          "kanji": "脆弱性",
+          "hiragana": "ぜいじゃくせい"
+        },
+        "back": {
+          "meaning": "lỗ hổng bảo mật"
+        }
+      },
+      {
+        "id": "card_b33dbe2b-1cd5-4e8a-a528-09db6b92de35",
+        "front": {
+          "kanji": "公開鍵",
+          "hiragana": "こうかいかぎ"
+        },
+        "back": {
+          "meaning": "khóa công khai"
+        }
+      },
+      {
+        "id": "card_7e18be4d-bb0d-43a6-8685-ec2c21e2de35",
+        "front": {
+          "kanji": "秘密鍵",
+          "hiragana": "ひみつかぎ"
+        },
+        "back": {
+          "meaning": "khóa bí mật"
+        }
+      },
+      {
+        "id": "card_6eeb5f9a-2e3a-46dc-811b-98137a463433",
+        "front": {
+          "kanji": "共通鍵暗号方式",
+          "hiragana": "きょうつうかぎあんごうほうしき"
+        },
+        "back": {
+          "meaning": "mã hóa khóa đối xứng"
+        }
+      },
+      {
+        "id": "card_5caccf67-0cee-4eeb-8a69-e3e00e8ee553",
+        "front": {
+          "kanji": "公開鍵暗号方式",
+          "hiragana": "こうかいかぎあんごうほうしき"
+        },
+        "back": {
+          "meaning": "mã hóa khóa công khai"
+        }
+      },
+      {
+        "id": "card_caa17566-05e8-448d-a336-65620521b0f9",
+        "front": {
+          "kanji": "ディジタル署名",
+          "hiragana": "ディジタルしょめい"
+        },
+        "back": {
+          "meaning": "chữ ký số"
+        }
+      },
+      {
+        "id": "card_3e226c69-11ad-402a-a706-9ecf579acbf9",
+        "front": {
+          "kanji": "認証局",
+          "hiragana": "にんしょうきょく"
+        },
+        "back": {
+          "meaning": "CA"
+        }
+      },
+      {
+        "id": "card_46fb43e3-5a27-4070-a073-6ab9224a3388",
+        "front": {
+          "kanji": "ディジタル証明書",
+          "hiragana": "ディジタルしょうめいしょ"
+        },
+        "back": {
+          "meaning": "chứng chỉ số"
+        }
+      },
+      {
+        "id": "card_299484f0-bfd4-448b-83b7-07fbcaabed3f",
+        "front": {
+          "kanji": "バイオメトリクス認証",
+          "hiragana": "バイオメトリクスにんしょう"
+        },
+        "back": {
+          "meaning": "xác thực sinh trắc học"
+        }
+      },
+      {
+        "id": "card_e7f31ce2-315a-41d1-86a5-0b9f21e060e0",
+        "front": {
+          "kanji": "WAF",
+          "hiragana": "ワフ"
+        },
+        "back": {
+          "meaning": "tường lửa ứng dụng web"
+        }
+      },
+      {
+        "id": "card_87b66b9d-9174-47f2-9c10-165a93883800",
+        "front": {
+          "kanji": "IDS",
+          "hiragana": "アイディーエス"
+        },
+        "back": {
+          "meaning": "hệ thống phát hiện xâm nhập"
+        }
+      },
+      {
+        "id": "card_fb091fe9-5f20-4144-b6de-bd488b613840",
+        "front": {
+          "kanji": "プロキシサーバ",
+          "hiragana": "プロキシサーバ"
+        },
+        "back": {
+          "meaning": "proxy server"
+        }
+      },
+      {
+        "id": "card_a52f3f3c-4ade-4c38-90b4-1229a0f71afe",
+        "front": {
+          "kanji": "人工知能",
+          "hiragana": "じんこうちのう"
+        },
+        "back": {
+          "meaning": "AI"
+        }
+      },
+      {
+        "id": "card_32b11483-c379-43b1-8248-72de344cd74f",
+        "front": {
+          "kanji": "強い人工知能",
+          "hiragana": "つよいじんこうちのう"
+        },
+        "back": {
+          "meaning": "Strong AI"
+        }
+      },
+      {
+        "id": "card_fcd49ea6-7e04-4c1a-bed0-adb8bf916d42",
+        "front": {
+          "kanji": "弱い人工知能",
+          "hiragana": "よわいじんこうちのう"
+        },
+        "back": {
+          "meaning": "Weak AI"
+        }
+      },
+      {
+        "id": "card_af050d69-d91d-44d9-870f-288d8d0d2160",
+        "front": {
+          "kanji": "汎用人工知能",
+          "hiragana": "はんようじんこうちのう"
+        },
+        "back": {
+          "meaning": "AGI"
+        }
+      },
+      {
+        "id": "card_26e3848d-7606-4a2d-95fe-a9d36e2ecb5b",
+        "front": {
+          "kanji": "機械学習",
+          "hiragana": "きかいがくしゅう"
+        },
+        "back": {
+          "meaning": "Machine Learning"
+        }
+      },
+      {
+        "id": "card_62e5243f-1f72-4ff3-bc08-c7714230541c",
+        "front": {
+          "kanji": "深層学習",
+          "hiragana": "しんそうがくしゅう"
+        },
+        "back": {
+          "meaning": "Deep Learning"
+        }
+      },
+      {
+        "id": "card_593ac445-38e1-4ccb-b905-dbb6d9d16c36",
+        "front": {
+          "kanji": "特徴量",
+          "hiragana": "とくちょうりょう"
+        },
+        "back": {
+          "meaning": "đặc trưng (feature)"
+        }
+      },
+      {
+        "id": "card_5d6ffea8-d4eb-4dfe-9c2f-a3aaf39a0a94",
+        "front": {
+          "kanji": "パラメータ",
+          "hiragana": "パラメータ"
+        },
+        "back": {
+          "meaning": "tham số"
+        }
+      },
+      {
+        "id": "card_2cdc725b-edac-4870-9c6f-a70d93a226c3",
+        "front": {
+          "kanji": "機械学習モデル",
+          "hiragana": "きかいがくしゅうモデル"
+        },
+        "back": {
+          "meaning": "mô hình học máy"
+        }
+      },
+      {
+        "id": "card_1517364f-2e1f-4d03-923a-1c97b78a7d73",
+        "front": {
+          "kanji": "分類",
+          "hiragana": "ぶんるい"
+        },
+        "back": {
+          "meaning": "phân loại"
+        }
+      },
+      {
+        "id": "card_731ae8e4-ed92-45bc-b26d-f70dd86b4489",
+        "front": {
+          "kanji": "回帰",
+          "hiragana": "かいき"
+        },
+        "back": {
+          "meaning": "hồi quy"
+        }
+      },
+      {
+        "id": "card_2f20a0b5-5f3f-4f65-8cb6-45496352c807",
+        "front": {
+          "kanji": "予測",
+          "hiragana": "よそく"
+        },
+        "back": {
+          "meaning": "dự đoán"
+        }
+      },
+      {
+        "id": "card_36a6bd15-2263-4333-bf85-754860d1df68",
+        "front": {
+          "kanji": "パターン",
+          "hiragana": "パターン"
+        },
+        "back": {
+          "meaning": "mẫu/quy luật"
+        }
+      },
+      {
+        "id": "card_95ae5d86-ec85-49fc-b516-00b4e33dfffa",
+        "front": {
+          "kanji": "認識能力",
+          "hiragana": "にんしきのうりょく"
+        },
+        "back": {
+          "meaning": "khả năng nhận dạng"
+        }
+      },
+      {
+        "id": "card_1ede769a-dc82-4993-b305-f7bd4b77c422",
+        "front": {
+          "kanji": "適応",
+          "hiragana": "てきおう"
+        },
+        "back": {
+          "meaning": "thích nghi"
+        }
+      }
+    ]
+  }
+]
