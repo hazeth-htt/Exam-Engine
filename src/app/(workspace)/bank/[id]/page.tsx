@@ -59,7 +59,7 @@ export default function BankDetail({ params }: { params: Promise<{ id: string }>
   return (
     <div className="max-w-4xl mx-auto">
       <button 
-        onClick={() => router.back()}
+        onClick={() => router.push('/')}
         className="flex items-center text-accent hover:text-accent/80 text-[13px] font-medium mb-6 transition-colors"
       >
         <ChevronLeft className="w-4 h-4 mr-0.5" />
