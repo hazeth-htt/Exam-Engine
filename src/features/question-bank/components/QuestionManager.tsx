@@ -24,21 +24,21 @@ export function QuestionManager({ bank, onUpdate }: Props) {
   const saveBank = async (updatedBank: QuestionBank) => {
     setLoading(true);
     try {
-      const res = await fetch(`/api/banks/${updatedBank.id}`, {
-        method: "PUT",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(updatedBank)
-      });
-      if (res.ok) {
-        await storage.saveQuestionBank(updatedBank);
-        onUpdate(updatedBank);
-      } else {
-        const err = await res.json();
-        alert(`Lỗi: ${err.error}`);
+      // Always save to IndexedDB first
+      await storage.saveQuestionBank(updatedBank);
+      onUpdate(updatedBank);
+
+      // Attempt to sync to server if it's a default bank, but ignore errors (Vercel read-only FS)
+      if (updatedBank.id.startsWith('default-')) {
+        fetch(`/api/banks/${updatedBank.id}`, {
+          method: "PUT",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(updatedBank)
+        }).catch(e => console.log('Server update failed, ignored'));
       }
     } catch (e) {
       console.error(e);
-      alert("Đã xảy ra lỗi khi lưu.");
+      alert("Đã xảy ra lỗi khi lưu vào bộ nhớ cục bộ.");
     }
     setLoading(false);
   };

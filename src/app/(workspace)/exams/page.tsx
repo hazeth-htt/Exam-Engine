@@ -37,28 +37,41 @@ function ExamsPageInner() {
 
   const handleCreateBank = async () => {
     if (!currentSubject) return;
-    const bankName = window.prompt("Nhập tên cho Ngân hàng mới:");
+    const bankName = prompt("Nhập tên cho Ngân hàng (Ví dụ: Đề thi thử 01):");
     if (!bankName) return;
-
     try {
-      const res = await fetch('/api/banks', {
+      const newBankId = `bank_${Date.now()}`;
+      const newBank = {
+        id: newBankId,
+        metadata: {
+          subject: currentSubject,
+          bankName: bankName,
+          version: "1.0",
+          author: "Local User"
+        },
+        examTemplates: [
+          {
+            id: "tpl_20",
+            name: "Luyện tập ngẫu nhiên (20 câu)",
+            description: "Lấy ngẫu nhiên 20 câu hỏi từ ngân hàng",
+            shuffleQuestions: true,
+            shuffleAnswers: true,
+            rules: [{ type: "default", count: 20 }]
+          }
+        ],
+        questions: []
+      };
+
+      await storage.saveQuestionBank(newBank);
+
+      // Attempt to sync to server but ignore if it fails (Vercel read-only FS)
+      fetch('/api/banks', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ subject: currentSubject, bankName })
-      });
-      if (res.ok) {
-        const result = await res.json();
-        const fetchNew = await fetch('/api/banks');
-        const defaultBanks = await fetchNew.json();
-        const newBank = defaultBanks.find((b: any) => b.id === result.id);
-        if (newBank) {
-          await storage.saveQuestionBank(newBank);
-        }
-        await loadBanks();
-      } else {
-        const error = await res.json();
-        alert(`Lỗi: ${error.error}`);
-      }
+      }).catch(e => console.log('Server sync failed'));
+
+      await loadBanks();
     } catch(e) {
       console.error(e);
       alert("Đã xảy ra lỗi khi tạo ngân hàng.");
@@ -69,13 +82,11 @@ function ExamsPageInner() {
     e.stopPropagation();
     if (confirm("Bạn có chắc chắn muốn xóa ngân hàng này không? Dữ liệu không thể khôi phục.")) {
       try {
-        const res = await fetch(`/api/banks/${id}`, { method: 'DELETE' });
-        if (res.ok) {
-          await storage.deleteQuestionBank(id);
-          await loadBanks();
-        } else {
-          alert("Xóa thất bại");
+        await storage.deleteQuestionBank(id);
+        if (id.startsWith('default-')) {
+          fetch(`/api/banks/${id}`, { method: 'DELETE' }).catch(e => console.log(e));
         }
+        await loadBanks();
       } catch(e) {
         console.error(e);
       }
@@ -87,8 +98,10 @@ function ExamsPageInner() {
     if (confirm(`Bạn có chắc chắn muốn xóa toàn bộ môn học "${currentSubject}" cùng các ngân hàng bên trong?`)) {
       try {
         for (const bank of filteredBanks) {
-          await fetch(`/api/banks/${bank.id}`, { method: 'DELETE' });
           await storage.deleteQuestionBank(bank.id);
+          if (bank.id.startsWith('default-')) {
+            fetch(`/api/banks/${bank.id}`, { method: 'DELETE' }).catch(e => console.log(e));
+          }
         }
         router.replace('/exams');
       } catch (e) {
