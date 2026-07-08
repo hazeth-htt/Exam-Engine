@@ -15,14 +15,19 @@ function WorkspaceLayoutInner({ children }: { children: React.ReactNode }) {
 
   const loadBanks = async () => {
     try {
-      const res = await fetch('/api/banks');
-      if (res.ok) {
+      const currentBanks = await storage.getQuestionBanks();
+      const hasInit = localStorage.getItem('hasInitBanks');
+      if (currentBanks.length === 0 && !hasInit) {
+        const res = await fetch('/api/banks');
         const defaultBanks = await res.json();
         for (const bank of defaultBanks) {
           if (bank && bank.id) {
             await storage.saveQuestionBank(bank);
           }
         }
+        localStorage.setItem('hasInitBanks', 'true');
+      } else if (!hasInit) {
+        localStorage.setItem('hasInitBanks', 'true');
       }
     } catch(e) {
       console.error(e);
@@ -43,17 +48,54 @@ function WorkspaceLayoutInner({ children }: { children: React.ReactNode }) {
     const subject = window.prompt("Nhập tên môn học mới:");
     if (!subject) return;
     try {
-      const res = await fetch('/api/banks', {
+      const newBankId = `bank_${Date.now()}`;
+      const newBank = {
+        id: newBankId,
+        metadata: {
+          subject: subject,
+          bankName: "Ngân hàng mặc định",
+          version: "1.0",
+          author: "Local User"
+        },
+        examTemplates: [
+          {
+            id: "tpl_10",
+            name: "Luyện tập nhanh (10 câu)",
+            description: "Lấy ngẫu nhiên 10 câu hỏi từ ngân hàng",
+            shuffleQuestions: true,
+            shuffleAnswers: true,
+            rules: [{ type: "default", count: 10 }]
+          },
+          {
+            id: "tpl_20",
+            name: "Luyện tập tiêu chuẩn (20 câu)",
+            description: "Lấy ngẫu nhiên 20 câu hỏi từ ngân hàng",
+            shuffleQuestions: true,
+            shuffleAnswers: true,
+            rules: [{ type: "default", count: 20 }]
+          },
+          {
+            id: "tpl_all",
+            name: "Luyện tập toàn bộ",
+            description: "Ôn tập tất cả câu hỏi có trong ngân hàng",
+            shuffleQuestions: true,
+            shuffleAnswers: true,
+            rules: [{ type: "default", count: 9999 }]
+          }
+        ],
+        questions: []
+      };
+
+      await storage.saveQuestionBank(newBank);
+      
+      fetch('/api/banks', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ subject })
-      });
-      if (res.ok) {
-        await loadBanks();
-        router.push(`/exams?subject=${encodeURIComponent(subject)}`);
-      } else {
-        alert("Có lỗi xảy ra");
-      }
+      }).catch(e => console.log('Server sync failed'));
+
+      await loadBanks();
+      router.push(`/exams?subject=${encodeURIComponent(subject)}`);
     } catch(e) {}
   };
 
