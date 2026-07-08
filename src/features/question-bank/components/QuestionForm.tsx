@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Question } from "@/types";
 import { Button } from "@/components/ui/button";
 import { useModal } from "@/components/ui/modal-provider";
@@ -14,6 +14,7 @@ interface Props {
 
 export function QuestionForm({ initialData, onSave, onCancel, loading }: Props) {
   const { showAlert } = useModal();
+  const formRef = useRef<HTMLDivElement>(null);
   
   const [questionText, setQuestionText] = useState("");
   const [imageUrl, setImageUrl] = useState("");
@@ -28,6 +29,10 @@ export function QuestionForm({ initialData, onSave, onCancel, loading }: Props) 
       setChoicesText(initialData.choices ? initialData.choices.join("\n") : "");
       setAnswer(Array.isArray(initialData.answer) ? initialData.answer.join(", ") : initialData.answer);
       setExplanation(initialData.explanation || "");
+      // Scroll to form smoothly
+      setTimeout(() => {
+        formRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
+      }, 50);
     } else {
       setQuestionText("");
       setImageUrl("");
@@ -59,7 +64,7 @@ export function QuestionForm({ initialData, onSave, onCancel, loading }: Props) 
   };
 
   return (
-    <div className="bg-[#f4f5f5]/50 border border-black/5 rounded-xl p-5 shadow-sm">
+    <div ref={formRef} className="bg-[#f4f5f5]/50 border border-black/5 rounded-xl p-5 shadow-sm scroll-mt-24">
       <h4 className="font-medium text-[14px] mb-4 text-foreground">{initialData ? "Sửa câu hỏi" : "Thêm câu hỏi mới"}</h4>
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
