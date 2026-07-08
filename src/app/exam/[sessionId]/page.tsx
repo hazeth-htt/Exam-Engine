@@ -123,7 +123,7 @@ export default function ExamPlayer({ params }: { params: Promise<{ sessionId: st
     
     const completedSession = { ...session, status: 'completed' as const, endTime: Date.now() };
     await storage.saveExamSession(completedSession);
-    router.push(`/result/${session.id}`);
+    router.replace(`/result/${session.id}`);
   };
 
   if (loading) return <div className="min-h-screen flex items-center justify-center text-gray-500">Đang tải dữ liệu thi...</div>;

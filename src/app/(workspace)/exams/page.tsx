@@ -156,36 +156,36 @@ function ExamsPageInner() {
           {filteredBanks.length === 0 ? (
             <div className="flex flex-col items-center justify-center py-32 text-center bg-white rounded-xl border border-dashed border-border shadow-sm">
               <div className="flex items-center justify-center mb-4">
-                <MacOSFolderIcon className="w-[80px] h-[64px] opacity-70 grayscale-[30%]" />
+                <MacOSFolderIcon className="w-[100px] h-[80px] opacity-70 grayscale-[30%]" />
               </div>
               <h3 className="text-foreground font-medium mb-1">Chưa có ngân hàng nào</h3>
               <p className="text-muted text-sm mb-6">Môn học này hiện đang trống.</p>
               <Button variant="outline" className="rounded-md h-8 px-4 text-xs font-medium" onClick={handleCreateBank}>Tạo ngân hàng</Button>
             </div>
           ) : (
-            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-8 gap-x-4 gap-y-8">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-x-6 gap-y-10">
               {filteredBanks.map((bank) => (
                 <div 
                   key={bank.id}
                   onClick={() => router.push(`/bank/${bank.id}`)}
-                  className="group flex flex-col items-center p-2 rounded-lg hover:bg-black/5 transition-all cursor-pointer relative"
+                  className="group flex flex-col items-center p-3 rounded-xl hover:bg-black/5 transition-all cursor-pointer relative"
                 >
                   <button 
                     onClick={(e) => handleDeleteBank(e, bank.id)} 
-                    className="absolute top-0 right-0 opacity-0 group-hover:opacity-100 bg-white border border-black/10 rounded-full w-5 h-5 flex items-center justify-center text-muted hover:text-error hover:bg-error/10 shadow-sm transition-all z-10"
+                    className="absolute top-1 right-1 opacity-0 group-hover:opacity-100 bg-white border border-black/10 rounded-full w-6 h-6 flex items-center justify-center text-muted hover:text-error hover:bg-error/10 shadow-sm transition-all z-10"
                     title="Xóa ngân hàng"
                   >
-                    <span className="text-[10px] font-bold">×</span>
+                    <span className="text-[12px] font-bold">×</span>
                   </button>
-                  <div className="flex items-center justify-center mb-2">
-                    <MacOSFolderIcon className="w-[80px] h-[64px] drop-shadow-sm group-hover:scale-105 transition-transform" />
+                  <div className="flex items-center justify-center mb-3">
+                    <MacOSFolderIcon className="w-[110px] h-[88px] drop-shadow-sm group-hover:scale-105 transition-transform" />
                   </div>
-                  <div className="bg-transparent px-1.5 py-0.5 rounded text-center w-full">
-                    <h3 className="font-medium text-[12px] text-foreground truncate leading-tight" title={bank.metadata.bankName || bank.metadata.subject}>
+                  <div className="bg-transparent px-2 py-0.5 rounded text-center w-full">
+                    <h3 className="font-medium text-[13px] text-foreground truncate leading-tight" title={bank.metadata.bankName || bank.metadata.subject}>
                       {bank.metadata.bankName || bank.metadata.subject}
                     </h3>
                   </div>
-                  <p className="text-[10px] text-muted mt-0.5">{bank.questions.length} mục</p>
+                  <p className="text-[11px] text-muted mt-0.5">{bank.questions.length} mục</p>
                 </div>
               ))}
             </div>

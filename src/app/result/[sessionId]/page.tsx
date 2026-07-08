@@ -90,7 +90,7 @@ export default function ResultView({ params }: { params: Promise<{ sessionId: st
             <Button className="flex-1" onClick={() => router.push(`/review/${session.id}`)}>
               Xem lại đáp án
             </Button>
-            <Button variant="outline" className="flex-1" onClick={() => router.push(`/bank/${session.bankId}`)}>
+            <Button variant="outline" className="flex-1" onClick={() => router.replace(`/bank/${session.bankId}`)}>
               Trở về Ngân hàng
             </Button>
           </div>

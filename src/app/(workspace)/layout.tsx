@@ -118,7 +118,7 @@ function WorkspaceLayoutInner({ children }: { children: React.ReactNode }) {
 
         {/* Workspace Content */}
         <div className="flex-1 overflow-y-auto">
-          <div className="max-w-[1200px] mx-auto p-8 pb-32">
+          <div className="w-full px-8 py-8 pb-32">
             {children}
           </div>
         </div>
