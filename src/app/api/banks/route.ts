@@ -27,3 +27,60 @@ export async function GET() {
     return NextResponse.json({ error: 'Failed to read data directory' }, { status: 500 });
   }
 }
+
+export async function POST(req: Request) {
+  try {
+    const body = await req.json();
+    const { subject, bankName } = body;
+    
+    if (!subject) {
+      return NextResponse.json({ error: 'Subject is required' }, { status: 400 });
+    }
+
+    const dataDir = path.join(process.cwd(), 'data');
+    if (!fs.existsSync(dataDir)) {
+      fs.mkdirSync(dataDir, { recursive: true });
+    }
+
+    const safeSubject = subject.replace(/[^a-z0-9]/gi, '_').toLowerCase();
+    const safeBankName = bankName ? bankName.replace(/[^a-z0-9]/gi, '_').toLowerCase() : 'default';
+    const filename = `${safeSubject}_${safeBankName}.json`;
+    const filePath = path.join(dataDir, filename);
+
+    if (fs.existsSync(filePath)) {
+      return NextResponse.json({ error: 'Bank already exists' }, { status: 400 });
+    }
+
+    const newBank = {
+      metadata: {
+        subject: subject,
+        bankName: bankName || undefined,
+        version: "1.0",
+        author: "System"
+      },
+      examTemplates: [
+        {
+          id: "tpl_20",
+          name: "Luyện tập ngẫu nhiên (20 câu)",
+          description: "Lấy ngẫu nhiên 20 câu hỏi từ ngân hàng",
+          shuffleQuestions: true,
+          shuffleAnswers: true,
+          rules: [
+            {
+              type: "default",
+              count: 20
+            }
+          ]
+        }
+      ],
+      questions: []
+    };
+
+    fs.writeFileSync(filePath, JSON.stringify(newBank, null, 2), 'utf8');
+
+    return NextResponse.json({ success: true, id: `default-${safeSubject}_${safeBankName}` });
+  } catch (err) {
+    console.error(err);
+    return NextResponse.json({ error: 'Failed to create new bank' }, { status: 500 });
+  }
+}

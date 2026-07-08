@@ -138,6 +138,13 @@ export default function ExamPlayer({ params }: { params: Promise<{ sessionId: st
     <div className="min-h-screen bg-background flex flex-col md:flex-row">
       <aside className="w-full md:w-80 bg-white border-r border-gray-200 flex flex-col h-auto md:h-screen sticky top-0 z-10">
         <div className="p-4 border-b border-gray-200">
+          <button 
+            onClick={() => router.push(`/bank/${session.bankId}`)}
+            className="flex items-center text-accent hover:text-accent/80 text-[13px] font-medium mb-4 transition-colors"
+          >
+            <span className="mr-1">←</span>
+            Quay lại ngân hàng
+          </button>
           <h2 className="font-semibold text-lg text-primary mb-1">Cấu trúc bài thi</h2>
           <p className="text-sm text-gray-500">
             Đã làm: <span className="font-semibold text-primary">{Object.keys(session.userAnswers).filter(k => session.userAnswers[k] && (Array.isArray(session.userAnswers[k]) ? (session.userAnswers[k] as string[]).length > 0 : true)).length}</span> / {session.questions.length}
@@ -156,7 +163,7 @@ export default function ExamPlayer({ params }: { params: Promise<{ sessionId: st
                 <div 
                   className={cn(
                     "text-sm font-semibold px-2 py-1.5 rounded cursor-pointer transition-colors",
-                    isActiveChapter ? "bg-primary/10 text-primary" : "text-gray-700 hover:bg-gray-100"
+                    isActiveChapter ? "bg-accent/10 text-accent" : "text-gray-700 hover:bg-gray-100"
                   )}
                   onClick={() => setCurrentIndex(group.startIndex)}
                 >
@@ -173,11 +180,9 @@ export default function ExamPlayer({ params }: { params: Promise<{ sessionId: st
                         key={q.id}
                         onClick={() => setCurrentIndex(globalIdx)}
                         className={cn(
-                          "h-8 rounded text-xs font-medium border flex items-center justify-center transition-all",
-                          active ? "border-primary ring-2 ring-primary ring-offset-1 scale-110 shadow-sm" : "border-gray-200 hover:border-gray-300",
-                          answered && !active ? "bg-primary/90 text-white border-primary" : "",
-                          !answered && !active ? "bg-white text-gray-600 hover:bg-gray-50" : "",
-                          answered && active ? "bg-primary text-white" : ""
+                          "h-8 rounded text-xs font-medium border flex items-center justify-center transition-colors",
+                          (active || answered) ? "bg-accent text-white border-accent shadow-sm" : "bg-white text-gray-600 border-gray-200 hover:bg-gray-50 hover:border-gray-300",
+                          active ? "ring-2 ring-accent/30" : ""
                         )}
                         title={`Câu ${globalIdx + 1}`}
                       >
@@ -215,6 +220,11 @@ export default function ExamPlayer({ params }: { params: Promise<{ sessionId: st
               <h2 className="text-xl md:text-[22px] font-medium text-gray-900 leading-relaxed whitespace-pre-wrap">
                 {currentQuestion.question}
               </h2>
+              {currentQuestion.imageUrl && (
+                <div className="mt-4">
+                  <img src={currentQuestion.imageUrl} alt="Hình minh hoạ" className="max-w-full h-auto rounded-lg shadow-sm border border-gray-200" />
+                </div>
+              )}
               {isMultiple && <p className="text-sm text-warning mt-3 font-medium bg-warning/10 inline-block px-2 py-1 rounded">(Chọn nhiều đáp án)</p>}
             </div>
 

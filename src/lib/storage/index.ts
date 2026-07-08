@@ -1,5 +1,5 @@
 import { openDB, DBSchema, IDBPDatabase } from 'idb';
-import { QuestionBank, ExamSession, FlashcardDeck } from '@/types';
+import { QuestionBank, ExamSession } from '@/types';
 
 interface ExamEngineDB extends DBSchema {
   questionBanks: {
@@ -9,10 +9,6 @@ interface ExamEngineDB extends DBSchema {
   examSessions: {
     key: string;
     value: ExamSession;
-  };
-  flashcardDecks: {
-    key: string;
-    value: FlashcardDeck;
   };
 }
 
@@ -32,9 +28,6 @@ const getDB = () => {
         }
         if (!db.objectStoreNames.contains('examSessions')) {
           db.createObjectStore('examSessions', { keyPath: 'id' });
-        }
-        if (!db.objectStoreNames.contains('flashcardDecks')) {
-          db.createObjectStore('flashcardDecks', { keyPath: 'id' });
         }
       },
     });
@@ -91,30 +84,5 @@ export const storage = {
     const db = await getDB();
     if (!db) return;
     await db.delete('examSessions', id);
-  },
-
-  // Flashcards
-  async getFlashcardDecks(): Promise<FlashcardDeck[]> {
-    const db = await getDB();
-    if (!db) return [];
-    return db.getAll('flashcardDecks');
-  },
-  
-  async getFlashcardDeck(id: string): Promise<FlashcardDeck | undefined> {
-    const db = await getDB();
-    if (!db) return undefined;
-    return db.get('flashcardDecks', id);
-  },
-  
-  async saveFlashcardDeck(deck: FlashcardDeck): Promise<void> {
-    const db = await getDB();
-    if (!db) return;
-    await db.put('flashcardDecks', deck);
-  },
-  
-  async deleteFlashcardDeck(id: string): Promise<void> {
-    const db = await getDB();
-    if (!db) return;
-    await db.delete('flashcardDecks', id);
   }
 };

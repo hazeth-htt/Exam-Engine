@@ -98,6 +98,11 @@ export default function ReviewPlayer({ params }: { params: Promise<{ sessionId: 
               <h2 className="text-xl md:text-2xl font-medium text-gray-900 leading-relaxed whitespace-pre-wrap">
                 {currentQuestion.question}
               </h2>
+              {currentQuestion.imageUrl && (
+                <div className="mt-4">
+                  <img src={currentQuestion.imageUrl} alt="Hình minh hoạ" className="max-w-full h-auto rounded-lg shadow-sm border border-gray-200" />
+                </div>
+              )}
             </div>
 
             <div className="space-y-3 mb-8">

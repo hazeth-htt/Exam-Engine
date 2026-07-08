@@ -1,17 +1,22 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #171717;
-  --color-success: #10b981;
-  --color-warning: #f59e0b;
-  --color-error: #ef4444;
-  --color-background: #f9fafb;
-  --color-foreground: #111827;
+  --color-primary: #000000;
+  --color-accent: #007aff;
+  --color-sidebar: rgba(244, 245, 245, 0.8);
+  --color-success: #34c759;
+  --color-warning: #ff9500;
+  --color-error: #ff3b30;
+  --color-background: #ffffff;
+  --color-foreground: #000000;
+  --color-border: #d1d1d6;
+  --color-muted: #8e8e93;
 }
 
 @layer base {
   body {
     @apply bg-background text-foreground antialiased;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   }
 }
 

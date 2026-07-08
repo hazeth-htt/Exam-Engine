@@ -4,6 +4,7 @@ export interface Question {
   difficulty: string | number;
   chapter?: string;
   question: string;
+  imageUrl?: string;
   choices?: string[];
   answer: string | string[]; 
   explanation?: string;
@@ -26,6 +27,7 @@ export interface ExamTemplate {
 
 export interface QuestionBankMetadata {
   subject: string;
+  bankName?: string;
   version: string;
   author?: string;
   createdAt?: string;
@@ -47,27 +49,4 @@ export interface ExamSession {
   questions: Question[];
   userAnswers: Record<string, string | string[]>;
   status: 'in-progress' | 'completed';
-}
-
-// Flashcard types
-export interface Flashcard {
-  id: string;
-  front: {
-    kanji: string;
-    hiragana?: string;
-  };
-  back: {
-    meaning: string;
-  };
-}
-
-export interface FlashcardDeck {
-  id: string;
-  metadata: {
-    title: string;
-    description: string;
-    version: string;
-    createdAt: number;
-  };
-  cards: Flashcard[];
 }

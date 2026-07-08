@@ -1,0 +1,23 @@
+{
+  "metadata": {
+    "subject": "Toán rời rạc",
+    "version": "1.0",
+    "author": "System"
+  },
+  "examTemplates": [
+    {
+      "id": "tpl_20",
+      "name": "Luyện tập ngẫu nhiên (20 câu)",
+      "description": "Lấy ngẫu nhiên 20 câu hỏi từ ngân hàng",
+      "shuffleQuestions": true,
+      "shuffleAnswers": true,
+      "rules": [
+        {
+          "type": "default",
+          "count": 20
+        }
+      ]
+    }
+  ],
+  "questions": []
+}
