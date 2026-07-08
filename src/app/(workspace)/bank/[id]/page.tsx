@@ -85,7 +85,7 @@ export default function BankDetail({ params }: { params: Promise<{ id: string }>
                 <h3 className="font-semibold text-[14px] text-foreground">{template.name}</h3>
                 <p className="text-[13px] text-muted mt-0.5">{template.description || "Không có mô tả"}</p>
                 <div className="flex items-center gap-3 mt-2 text-[12px] text-muted">
-                  <span className="bg-black/5 px-2 py-0.5 rounded font-medium">{template.type}</span>
+                  <span className="bg-black/5 px-2 py-0.5 rounded font-medium">{template.rules.reduce((acc, r) => acc + r.count, 0)} câu hỏi</span>
                 </div>
               </div>
               <button 
