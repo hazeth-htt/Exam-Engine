@@ -60,17 +60,28 @@ export async function POST(req: Request) {
       },
       examTemplates: [
         {
+          id: "tpl_10",
+          name: "Luyện tập nhanh (10 câu)",
+          description: "Lấy ngẫu nhiên 10 câu hỏi từ ngân hàng",
+          shuffleQuestions: true,
+          shuffleAnswers: true,
+          rules: [{ type: "default", count: 10 }]
+        },
+        {
           id: "tpl_20",
-          name: "Luyện tập ngẫu nhiên (20 câu)",
+          name: "Luyện tập tiêu chuẩn (20 câu)",
           description: "Lấy ngẫu nhiên 20 câu hỏi từ ngân hàng",
           shuffleQuestions: true,
           shuffleAnswers: true,
-          rules: [
-            {
-              type: "default",
-              count: 20
-            }
-          ]
+          rules: [{ type: "default", count: 20 }]
+        },
+        {
+          id: "tpl_all",
+          name: "Luyện tập toàn bộ",
+          description: "Ôn tập tất cả câu hỏi có trong ngân hàng",
+          shuffleQuestions: true,
+          shuffleAnswers: true,
+          rules: [{ type: "default", count: 9999 }]
         }
       ],
       questions: []

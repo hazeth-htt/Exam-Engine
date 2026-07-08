@@ -36,23 +36,23 @@ export const generateExamSession = (
     }
     const availableQuestions = matchingQuestions.filter((q) => !usedQuestionIds.has(q.id));
 
-    if (availableQuestions.length < rule.count) {
-      throw new ExamGenerationError(
-        `Not enough questions for rule '${rule.type}'. Required: ${rule.count}, Available: ${availableQuestions.length}.`
-      );
-    }
+    const actualCount = Math.min(rule.count, availableQuestions.length);
 
     let picked: Question[];
     if (template.shuffleQuestions) {
-      picked = shuffleArray(availableQuestions).slice(0, rule.count);
+      picked = shuffleArray(availableQuestions).slice(0, actualCount);
     } else {
-      picked = availableQuestions.slice(0, rule.count);
+      picked = availableQuestions.slice(0, actualCount);
     }
 
     for (const q of picked) {
       usedQuestionIds.add(q.id);
       selectedQuestions.push(q);
     }
+  }
+
+  if (selectedQuestions.length === 0) {
+    throw new ExamGenerationError("Ngân hàng này chưa có câu hỏi nào phù hợp với chế độ luyện tập.");
   }
 
   let finalQuestions = selectedQuestions;
