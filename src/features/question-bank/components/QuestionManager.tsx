@@ -103,6 +103,11 @@ export function QuestionManager({ bank, onUpdate }: Props) {
     handleCancelEdit();
   };
 
+  const [page, setPage] = useState(1);
+  const itemsPerPage = 50;
+  const totalPages = Math.ceil(bank.questions.length / itemsPerPage);
+  const displayedQuestions = bank.questions.slice((page - 1) * itemsPerPage, page * itemsPerPage);
+
   return (
     <div className="space-y-6">
       <div className="flex justify-between items-center">
@@ -175,10 +180,10 @@ export function QuestionManager({ bank, onUpdate }: Props) {
       )}
 
       <div className="space-y-0 border-t border-black/5 mt-4">
-        {bank.questions.map((q, idx) => (
+        {displayedQuestions.map((q, idx) => (
           <div key={q.id} className="py-4 border-b border-black/5 bg-transparent hover:bg-black/[0.02] transition-colors flex gap-4 items-start group px-2">
             <div className="text-muted w-6 flex justify-end font-medium text-[13px] pt-0.5 shrink-0">
-              {idx + 1}.
+              {(page - 1) * itemsPerPage + idx + 1}.
             </div>
             <div className="flex-1 min-w-0">
               <p className="font-medium whitespace-pre-wrap text-[13px] text-foreground leading-relaxed">{q.question}</p>
@@ -210,6 +215,32 @@ export function QuestionManager({ bank, onUpdate }: Props) {
         ))}
         {bank.questions.length === 0 && <p className="text-center text-[13px] text-muted py-12">Chưa có câu hỏi nào.</p>}
       </div>
+
+      {totalPages > 1 && (
+        <div className="flex justify-center items-center gap-2 mt-6 pt-4">
+          <Button 
+            variant="outline" 
+            size="sm" 
+            onClick={() => setPage(p => Math.max(1, p - 1))}
+            disabled={page === 1}
+            className="h-8 text-[13px]"
+          >
+            Trang trước
+          </Button>
+          <span className="text-[13px] text-muted-foreground px-2">
+            Trang {page} / {totalPages}
+          </span>
+          <Button 
+            variant="outline" 
+            size="sm" 
+            onClick={() => setPage(p => Math.min(totalPages, p + 1))}
+            disabled={page === totalPages}
+            className="h-8 text-[13px]"
+          >
+            Trang tiếp
+          </Button>
+        </div>
+      )}
     </div>
   );
 }
