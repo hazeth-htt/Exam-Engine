@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Trash2 } from "lucide-react";
 import { storage } from "@/lib/storage";
+import { useModal } from "@/components/ui/modal-provider";
 
 interface Props {
   bank: QuestionBank;
@@ -13,6 +14,7 @@ interface Props {
 export function QuestionManager({ bank, onUpdate }: Props) {
   const [isAdding, setIsAdding] = useState(false);
   const [loading, setLoading] = useState(false);
+  const { showConfirm, showAlert } = useModal();
   
   // Form states
   const [questionText, setQuestionText] = useState("");
@@ -38,21 +40,21 @@ export function QuestionManager({ bank, onUpdate }: Props) {
       }
     } catch (e) {
       console.error(e);
-      alert("Đã xảy ra lỗi khi lưu vào bộ nhớ cục bộ.");
+      await showAlert("Đã xảy ra lỗi khi lưu vào bộ nhớ cục bộ.");
     }
     setLoading(false);
   };
 
-  const handleDelete = (qId: string) => {
-    if (!confirm("Xoá câu hỏi này?")) return;
+  const handleDelete = async (qId: string) => {
+    if (!(await showConfirm("Xoá câu hỏi này?"))) return;
     const updated = { ...bank, questions: bank.questions.filter(q => q.id !== qId) };
-    saveBank(updated);
+    await saveBank(updated);
   };
 
   const handleAdd = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!questionText.trim()) return alert("Vui lòng nhập câu hỏi");
-    if (!answer.trim()) return alert("Vui lòng nhập đáp án");
+    if (!questionText.trim()) return await showAlert("Vui lòng nhập câu hỏi");
+    if (!answer.trim()) return await showAlert("Vui lòng nhập đáp án");
 
     const choices = choicesText.split("\n").map(s => s.trim()).filter(Boolean);
     

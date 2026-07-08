@@ -7,10 +7,12 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { Plus } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { MacOSFolderIcon } from "@/components/icons/MacOSFolderIcon";
+import { useModal } from "@/components/ui/modal-provider";
 
 function ExamsPageInner() {
   const [banks, setBanks] = useState<QuestionBank[]>([]);
   const [loading, setLoading] = useState(true);
+  const { showPrompt, showConfirm, showAlert } = useModal();
   const router = useRouter();
   const searchParams = useSearchParams();
   const currentSubject = searchParams.get('subject');
@@ -37,7 +39,7 @@ function ExamsPageInner() {
 
   const handleCreateBank = async () => {
     if (!currentSubject) return;
-    const bankName = prompt("Nhập tên cho Ngân hàng (Ví dụ: Đề thi thử 01):");
+    const bankName = await showPrompt("Nhập tên cho Ngân hàng (Ví dụ: Đề thi thử 01):", "");
     if (!bankName) return;
     try {
       const newBankId = `bank_${Date.now()}`;
@@ -90,13 +92,13 @@ function ExamsPageInner() {
       await loadBanks();
     } catch(e) {
       console.error(e);
-      alert("Đã xảy ra lỗi khi tạo ngân hàng.");
+      await showAlert("Đã xảy ra lỗi khi tạo ngân hàng.");
     }
   };
 
   const handleDeleteBank = async (e: React.MouseEvent, id: string) => {
     e.stopPropagation();
-    if (confirm("Bạn có chắc chắn muốn xóa ngân hàng này không? Dữ liệu không thể khôi phục.")) {
+    if (await showConfirm("Bạn có chắc chắn muốn xóa ngân hàng này không? Dữ liệu không thể khôi phục.")) {
       try {
         await storage.deleteQuestionBank(id);
         if (id.startsWith('default-')) {
@@ -111,7 +113,7 @@ function ExamsPageInner() {
 
   const handleDeleteSubject = async () => {
     if (!currentSubject) return;
-    if (confirm(`Bạn có chắc chắn muốn xóa toàn bộ môn học "${currentSubject}" cùng các ngân hàng bên trong?`)) {
+    if (await showConfirm(`Bạn có chắc chắn muốn xóa toàn bộ môn học "${currentSubject}" cùng các ngân hàng bên trong?`)) {
       try {
         for (const bank of filteredBanks) {
           await storage.deleteQuestionBank(bank.id);

@@ -7,11 +7,14 @@ import { useRouter, usePathname, useSearchParams } from "next/navigation";
 import { Plus, Search } from "lucide-react";
 import { MacOSFolderIcon } from "@/components/icons/MacOSFolderIcon";
 
+import { useModal } from "@/components/ui/modal-provider";
+
 function WorkspaceLayoutInner({ children }: { children: React.ReactNode }) {
   const [banks, setBanks] = useState<QuestionBank[]>([]);
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
+  const { showPrompt, showAlert } = useModal();
 
   const loadBanks = async () => {
     try {
@@ -45,7 +48,7 @@ function WorkspaceLayoutInner({ children }: { children: React.ReactNode }) {
   }, [banks]);
 
   const handleCreateSubject = async () => {
-    const subject = window.prompt("Nhập tên môn học mới:");
+    const subject = await showPrompt("Nhập tên môn học mới:", "");
     if (!subject) return;
     try {
       const newBankId = `bank_${Date.now()}`;

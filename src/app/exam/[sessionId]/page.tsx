@@ -6,6 +6,7 @@ import { ExamSession } from "@/types";
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
 import { cn } from "@/utils/cn";
+import { useModal } from "@/components/ui/modal-provider";
 
 export default function ExamPlayer({ params }: { params: Promise<{ sessionId: string }> }) {
   const resolvedParams = use(params);
@@ -13,6 +14,7 @@ export default function ExamPlayer({ params }: { params: Promise<{ sessionId: st
   const [currentIndex, setCurrentIndex] = useState(0);
   const [loading, setLoading] = useState(true);
   const [checkedQuestions, setCheckedQuestions] = useState<Set<string>>(new Set());
+  const { showConfirm } = useModal();
   const router = useRouter();
   
   // Ref to automatically scroll sidebar to active chapter
@@ -119,7 +121,7 @@ export default function ExamPlayer({ params }: { params: Promise<{ sessionId: st
 
   const handleSubmit = async () => {
     if (!session) return;
-    if (!confirm("Bạn có chắc chắn muốn nộp bài?")) return;
+    if (!(await showConfirm("Bạn có chắc chắn muốn nộp bài?"))) return;
     
     const completedSession = { ...session, status: 'completed' as const, endTime: Date.now() };
     await storage.saveExamSession(completedSession);
