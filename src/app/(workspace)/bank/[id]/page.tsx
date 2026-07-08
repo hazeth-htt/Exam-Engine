@@ -9,6 +9,8 @@ import { useRouter } from "next/navigation";
 import { Play, ChevronLeft } from "lucide-react";
 import { QuestionManager } from "@/features/question-bank/components/QuestionManager";
 
+import { Skeleton } from "@/components/ui/skeleton";
+
 export default function BankDetail({ params }: { params: Promise<{ id: string }> }) {
   const resolvedParams = use(params);
   const [bank, setBank] = useState<QuestionBank | null>(null);
@@ -35,7 +37,23 @@ export default function BankDetail({ params }: { params: Promise<{ id: string }>
     }
   };
 
-  if (loading) return <div className="p-8 text-sm text-muted">Đang tải thông tin...</div>;
+  if (loading) return (
+    <div className="max-w-4xl mx-auto space-y-6">
+      <Skeleton className="h-4 w-24 mb-6" />
+      <div className="space-y-2">
+        <Skeleton className="h-8 w-1/2" />
+        <Skeleton className="h-4 w-1/3" />
+      </div>
+      <div className="flex justify-center my-8">
+        <Skeleton className="h-9 w-64 rounded-lg" />
+      </div>
+      <div className="space-y-4">
+        <Skeleton className="h-32 w-full rounded-xl" />
+        <Skeleton className="h-32 w-full rounded-xl" />
+      </div>
+    </div>
+  );
+
   if (!bank) return <div className="p-8 text-sm text-muted">Không tìm thấy ngân hàng.</div>;
 
   return (
