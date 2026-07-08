@@ -36,611 +36,1058 @@
   ],
   "questions": [
     {
-      "id": "q_1783527003484_1",
+      "id": "q_1783527369115_1",
       "type": "multiple-choice",
       "difficulty": "Trung bình",
-      "question": "Hoàn chỉnh câu sau :",
-      "answer": "Unknown",
+      "question": "Hoàn chỉnh câu sau :\n……… là cách biểu diễn tốt để mô tả hành vi của một số đối tượng. Nó rất tốt để mô tả hành vi liên quan đến một số đối tượng hợp tác với nhau không cần biểu diễn rõ trình tự thời gian",
+      "choices": [
+        "Sơ đồ trạng thái (State Diagrams)",
+        "Sơ đồ tuần tự (Sequence Diagrams)",
+        "Sơ đồ cộng tác (Collaboration Diagrams)",
+        "Sơ đồ hoạt động (Activity Diagrams)"
+      ],
+      "answer": "Sơ đồ trạng thái (State Diagrams)",
       "explanation": "Chưa có giải thích."
     },
     {
-      "id": "q_1783527003484_2",
+      "id": "q_1783527369115_2",
       "type": "multiple-choice",
       "difficulty": "Trung bình",
-      "question": "Hoàn chỉnh câu sau :",
-      "answer": "Unknown",
+      "question": "Hoàn chỉnh câu sau :\n……… là cách biểu diễn tốt để mô tả luồng hoạt động trong một Use Case và thường được dùng trong mô hình nghiệp vụ",
+      "choices": [
+        "Sơ đồ trạng thái (State Diagrams)",
+        "Sơ đồ tương tác (Interaction Diagrams)",
+        "Sơ đồ hoạt động (Activity Diagrams)",
+        "Sơ đồ lớp (Class Diagrams)"
+      ],
+      "answer": "Sơ đồ trạng thái (State Diagrams)",
       "explanation": "Chưa có giải thích."
     },
     {
-      "id": "q_1783527003484_3",
+      "id": "q_1783527369115_3",
       "type": "multiple-choice",
       "difficulty": "Trung bình",
       "question": "Sơ đồ hoạt động được sử dụng trong những tình huống sau :",
-      "answer": "Unknown",
+      "choices": [
+        "Phân tích một use case",
+        "Mô tả thuật toán tuần tự phức tạp, xây dựng lưu đồ",
+        "Liên quan đến các ứng dạng đa luồng",
+        "Tất cả các câu trên đều đúng"
+      ],
+      "answer": "Phân tích một use case",
       "explanation": "Chưa có giải thích."
     },
     {
-      "id": "q_1783527003484_4",
+      "id": "q_1783527369115_4",
       "type": "multiple-choice",
       "difficulty": "Trung bình",
       "question": "Sơ đồ hoạt động được sử dụng trong những tình huống sau :",
-      "answer": "Unknown",
+      "choices": [
+        "Biểu diễn các đối tượng cộng tác với nhau như thế nào.",
+        "Biểu diễn các hành vi của đối tượng qua thời gian sống của chúng.",
+        "Biểu diễn điều kiện logic phức tạp",
+        "Tất cả các câu trên đều sai"
+      ],
+      "answer": "Biểu diễn các đối tượng cộng tác với nhau như thế nào.",
       "explanation": "Chưa có giải thích."
     },
     {
-      "id": "q_1783527003484_5",
+      "id": "q_1783527369115_5",
       "type": "multiple-choice",
       "difficulty": "Trung bình",
       "question": "Để biểu diễn các quan hệ vật lý giữa phần mềm và các thành phần phần cứng trong một hệ thống bạn sẽ dụng sơ đồ nào của UML ?",
-      "answer": "Unknown",
+      "choices": [
+        "Sơ đồ triển khai (Deployment Diagram)",
+        "Sơ đồ hoạt động (Activity Diagram)",
+        "Sơ đồ lớp (Class Diagram)",
+        "Sơ đồ trạng thái (State Diagram)"
+      ],
+      "answer": "Sơ đồ triển khai (Deployment Diagram)",
       "explanation": "Chưa có giải thích."
     },
     {
-      "id": "q_1783527003484_6",
+      "id": "q_1783527369115_6",
       "type": "multiple-choice",
       "difficulty": "Trung bình",
       "question": "Mục đích của sơ đồ hoạt động là :",
-      "answer": "Unknown",
+      "choices": [
+        "Biểu diễn hành vi với cấu trúc điều khiển. Sơ đồ hoạt động có thể biểu diễn nhiều đối tượng trong một use case.",
+        "Biểu diễn cấu trúc tĩnh của các khái niệm, các loại và các lớp",
+        "Giúp nắm được mục đích cơ bản của lớp, tốt cho việc khám phá việc cài đặt use case như thế nào.",
+        "Biểu diễn cách bố trí các thành phần trên các nút phần cứng"
+      ],
+      "answer": "Biểu diễn hành vi với cấu trúc điều khiển. Sơ đồ hoạt động có thể biểu diễn nhiều đối tượng trong một use case.",
       "explanation": "Chưa có giải thích."
     },
     {
-      "id": "q_1783527003484_7",
+      "id": "q_1783527369115_7",
       "type": "multiple-choice",
       "difficulty": "Trung bình",
       "question": "Mục đích của sơ đồ lớp là :",
-      "answer": "Unknown",
+      "choices": [
+        "Biểu diễn hành vi với cấu trúc điều khiển. Sơ đồ hoạt động có thể biểu diễn nhiều đối tượng trong một use case.",
+        "Biểu diễn cấu trúc tĩnh của các khái niệm, các loại và các lớp",
+        "Giúp nắm được mục đích cơ bản của lớp, tốt cho việc khám phá việc cài đặt use case như thế nào.",
+        "Biểu diễn cách bố trí các thành phần trên các nút phần cứng"
+      ],
+      "answer": "Biểu diễn hành vi với cấu trúc điều khiển. Sơ đồ hoạt động có thể biểu diễn nhiều đối tượng trong một use case.",
       "explanation": "Chưa có giải thích."
     },
     {
-      "id": "q_1783527003484_8",
+      "id": "q_1783527369115_8",
       "type": "multiple-choice",
       "difficulty": "Trung bình",
       "question": "Mục đích của sơ đồ triển khai là :",
-      "answer": "Unknown",
+      "choices": [
+        "Biểu diễn hành vi với cấu trúc điều khiển. Sơ đồ hoạt động có thể biểu diễn nhiều đối tượng trong một use case.",
+        "Biểu diễn cấu trúc tĩnh của các khái niệm, các loại và các lớp",
+        "Giúp nắm được mục đích cơ bản của lớp, tốt cho việc khám phá việc cài đặt use case như thế nào.",
+        "Biểu diễn cách bố trí các thành phần trên các nút phần cứng"
+      ],
+      "answer": "Biểu diễn hành vi với cấu trúc điều khiển. Sơ đồ hoạt động có thể biểu diễn nhiều đối tượng trong một use case.",
       "explanation": "Chưa có giải thích."
     },
     {
-      "id": "q_1783527003484_9",
+      "id": "q_1783527369115_9",
       "type": "multiple-choice",
       "difficulty": "Trung bình",
       "question": "Mục đích của sơ đồ tương tác (Interaction Diagram) là :",
-      "answer": "Unknown",
+      "choices": [
+        "Cung cấp định nghĩa chặt chẽ mục đích các hành vi và trạng thái hợp lệ của lớp.",
+        "Biểu diễn các đối tượng cộng tác trong một use case như thế nào.",
+        "Biểu diễn nhóm các lớp và các hoạt động giữa chúng",
+        "Cung cấp một vài kỹ thuật hữu ích cho phân tích, thiết kế và viết mã."
+      ],
+      "answer": "Cung cấp định nghĩa chặt chẽ mục đích các hành vi và trạng thái hợp lệ của lớp.",
       "explanation": "Chưa có giải thích."
     },
     {
-      "id": "q_1783527003484_10",
+      "id": "q_1783527369115_10",
       "type": "multiple-choice",
       "difficulty": "Trung bình",
       "question": "Mục đích của sơ đồ gói (Package Diagram) là :",
-      "answer": "Unknown",
+      "choices": [
+        "Cung cấp định nghĩa chặt chẽ mục đích các hành vi và trạng thái hợp lệ của lớp.",
+        "Biểu diễn các đối tượng cộng tác trong một use case như thế nào.",
+        "Biểu diễn cho nhóm các lớp và các phụ thuộc giữa chúng",
+        "Cung cấp một vài kỹ thuật hữu ích cho phân tích, thiết kế và viết mã."
+      ],
+      "answer": "Cung cấp định nghĩa chặt chẽ mục đích các hành vi và trạng thái hợp lệ của lớp.",
       "explanation": "Chưa có giải thích."
     },
     {
-      "id": "q_1783527003484_11",
+      "id": "q_1783527369116_11",
       "type": "multiple-choice",
       "difficulty": "Trung bình",
       "question": "Mục đích của sơ đồ trạng thái (State Diagram) là :",
-      "answer": "Unknown",
+      "choices": [
+        "Biểu diễn một đối tượng thay đổi trạng thái qua nhiều use cases.",
+        "Biểu diễn nhiểu đối tượng thay đổi trạng thái qua nhiều use cases.",
+        "Biểu diễn cấu trúc tĩnh của các khái niệm, các loại và các lớp",
+        "Giúp cung cấp mục đích chính yếu của lớp"
+      ],
+      "answer": "Biểu diễn một đối tượng thay đổi trạng thái qua nhiều use cases.",
       "explanation": "Chưa có giải thích."
     },
     {
-      "id": "q_1783527003484_12",
+      "id": "q_1783527369116_12",
       "type": "multiple-choice",
       "difficulty": "Trung bình",
       "question": "Mục đích của Use Case là :",
-      "answer": "Unknown",
+      "choices": [
+        "Chỉ ra những yêu cầu từ phía người dùng .",
+        "Cung cấp một vài kỹ thuật hữu ích cho phân tích, thiết kế và viết mã.",
+        "Là nền tảng cho việc kiểm tra hệ thống",
+        "Câu a và c đúng"
+      ],
+      "answer": "Chỉ ra những yêu cầu từ phía người dùng .",
       "explanation": "Chưa có giải thích."
     },
     {
-      "id": "q_1783527003484_13",
+      "id": "q_1783527369116_13",
       "type": "multiple-choice",
       "difficulty": "Trung bình",
       "question": "Trong giai đoạn xây dựng (Construction phase), mỗi lần lặp sẽ bao gồm :",
-      "answer": "Unknown",
+      "choices": [
+        "Analysis, design, coding, testing, integration",
+        "Design, coding, testing, integration",
+        "Analysis, design, coding, testing",
+        "Design, coding"
+      ],
+      "answer": "Analysis, design, coding, testing, integration",
       "explanation": "Chưa có giải thích."
     },
     {
-      "id": "q_1783527003484_14",
+      "id": "q_1783527369116_14",
       "type": "multiple-choice",
       "difficulty": "Trung bình",
-      "question": "Hoàn chỉnh các mệnh đề sau về mối quan hệ giữa các Use Cases",
-      "answer": "Unknown",
+      "question": "Hoàn chỉnh các mệnh đề sau về mối quan hệ giữa các Use Cases\nthành phần (Component Diagram)",
+      "choices": [
+        "Sơ đồ hệ thống (System Diagram)"
+      ],
+      "answer": "Sơ đồ hệ thống (System Diagram)",
       "explanation": "Chưa có giải thích."
     },
     {
-      "id": "q_1783527003484_18",
+      "id": "q_1783527369116_18",
       "type": "multiple-choice",
       "difficulty": "Trung bình",
       "question": "Phát biểu nào đúng về sơ đồ hoạt động ?",
-      "answer": "Unknown",
+      "choices": [
+        "Có thể có một phân nhánh có một hoạt động đến và nhiều hoạt động đi theo điều kiện.",
+        "Có thể có một sự hợp nhất đồng bộ của các luồng đồng thời.",
+        "Cả 2 câu trên đều đúng",
+        "Cả 2 câu trên đều sai"
+      ],
+      "answer": "Có thể có một phân nhánh có một hoạt động đến và nhiều hoạt động đi theo điều kiện.",
       "explanation": "Chưa có giải thích."
     },
     {
-      "id": "q_1783527003484_19",
+      "id": "q_1783527369116_19",
       "type": "multiple-choice",
       "difficulty": "Trung bình",
       "question": "Phát biểu nào đúng về sơ đồ thành phần (Component Diagrams) ?",
-      "answer": "Unknown",
+      "choices": [
+        "Một thành phần có thể có nhiều hơn một giao diện, nó Biểu diễn cho một đơn vị (module) vật lý của mã lệnh",
+        "Một thành phần không thể có nhiều hơn một giao diện.",
+        "Một thành phần trình bày vài loại của đơn vị phần cứng",
+        "Câu a và c đúng"
+      ],
+      "answer": "Một thành phần có thể có nhiều hơn một giao diện, nó Biểu diễn cho một đơn vị (module) vật lý của mã lệnh",
       "explanation": "Chưa có giải thích."
     },
     {
-      "id": "q_1783527003484_20",
+      "id": "q_1783527369116_20",
       "type": "multiple-choice",
       "difficulty": "Trung bình",
       "question": "Các khái niệm về phạm vi hệ thống được tìm thấy trong :",
-      "answer": "Unknown",
+      "choices": [
+        "Use Cases",
+        "Sơ đồ Use Cases",
+        "Sơ đồ tương tác (Interaction Diagrams)",
+        "Sơ đồ tuần tự (Sequence Diagrams)"
+      ],
+      "answer": "Use Cases",
       "explanation": "Chưa có giải thích."
     },
     {
-      "id": "q_1783527003484_21",
+      "id": "q_1783527369116_21",
       "type": "multiple-choice",
       "difficulty": "Trung bình",
-      "question": "Cho biết ký hiệu trong hình biểu diễn cho quan hệ",
-      "answer": "Unknown",
-      "explanation": "Chưa có giải thích."
+      "question": "Cho biết ký hiệu trong hình biểu diễn cho quan hệ\n(Câu hỏi này cần bổ sung hình ảnh)",
+      "choices": [
+        "ect, component, deployment",
+        "class, object, component, deployment",
+        "sequence, use case, class, statechart, activity",
+        "sequence, collaboration, statechart, activity"
+      ],
+      "answer": "ect, component, deployment",
+      "explanation": "Vui lòng bổ sung hình ảnh cho câu hỏi này."
     },
     {
-      "id": "q_1783527003484_25",
+      "id": "q_1783527369116_25",
       "type": "multiple-choice",
       "difficulty": "Trung bình",
       "question": "Việc đo “độ mạnh” của sự kết nối giữa hai thành phần hệ thống được biết như là:",
-      "answer": "Unknown",
+      "choices": [
+        "Coupling (liên kết)",
+        "Cohesion (kết dính)",
+        "Aggregation (kết tập)",
+        "Bonding (sự liên kết)"
+      ],
+      "answer": "Coupling (liên kết)",
       "explanation": "Chưa có giải thích."
     },
     {
-      "id": "q_1783527003484_26",
+      "id": "q_1783527369116_26",
       "type": "multiple-choice",
       "difficulty": "Trung bình",
       "question": "Biểu đồ nào sau đây không phải là biểu đồ của UML :",
-      "answer": "Unknown",
+      "choices": [
+        "Component diagram",
+        "State-chart diagram",
+        "Deployment diagram",
+        "Relationship diagram"
+      ],
+      "answer": "Component diagram",
       "explanation": "Chưa có giải thích."
     },
     {
-      "id": "q_1783527003484_27",
+      "id": "q_1783527369116_27",
       "type": "multiple-choice",
       "difficulty": "Trung bình",
-      "question": "Ký hiệu trong hình (iii) biểu diễn cho quan hệ",
-      "answer": "Unknown",
-      "explanation": "Chưa có giải thích."
+      "question": "Ký hiệu trong hình (iii) biểu diễn cho quan hệ\n(Câu hỏi này cần bổ sung hình ảnh)",
+      "choices": [
+        "Mở rộng (extend)",
+        "Bao gồm (include)",
+        "Kết hợp (association)",
+        "Tổng quát hóa (generalization)"
+      ],
+      "answer": "Mở rộng (extend)",
+      "explanation": "Vui lòng bổ sung hình ảnh cho câu hỏi này."
     },
     {
-      "id": "q_1783527003484_28",
+      "id": "q_1783527369116_28",
       "type": "multiple-choice",
       "difficulty": "Trung bình",
-      "question": "Chỉ phát biểu đúng về Mô hình hoá use case nghiệp vụ và Mô hình hoá use case hệ thống:",
+      "question": "Chỉ phát biểu đúng về Mô hình hoá use case nghiệp vụ và Mô hình hoá use case hệ thống:\n[CÂU HỎI LỖI DO THIẾU ĐÁP ÁN TRONG OCR]",
       "answer": "Unknown",
       "explanation": "Chưa có giải thích."
     },
     {
-      "id": "q_1783527003484_31",
+      "id": "q_1783527369116_31",
       "type": "multiple-choice",
       "difficulty": "Trung bình",
       "question": "Sơ đồ nào sau đây không phải là sơ đồ của UML :",
-      "answer": "Unknown",
+      "choices": [
+        "Component diagram",
+        "State-chart diagram",
+        "Deployment diagram",
+        "Relationship diagram"
+      ],
+      "answer": "Component diagram",
       "explanation": "Chưa có giải thích."
     },
     {
-      "id": "q_1783527003484_32",
+      "id": "q_1783527369116_32",
       "type": "multiple-choice",
       "difficulty": "Trung bình",
       "question": "Thành phần nào sau đây không là đặc tính của một đồi tượng",
-      "answer": "Unknown",
+      "choices": [
+        "Identity",
+        "Behaviour",
+        "Action",
+        "State"
+      ],
+      "answer": "Identity",
       "explanation": "Chưa có giải thích."
     },
     {
-      "id": "q_1783527003484_33",
+      "id": "q_1783527369116_33",
       "type": "multiple-choice",
       "difficulty": "Trung bình",
       "question": "Sự đóng gói được hiểu là :",
-      "answer": "Unknown",
+      "choices": [
+        "Sự che dấu thong tin",
+        "Sự tổ chức các thành phần của một sơ đồ vào trong một gói (package)",
+        "Việc xây dựng một lớp cha dựa trên các thuộc tính và các hành vi chung của các lớp con",
+        "Việc xây dựng giao diện gồm tập các hành vi mà ta muốn sử dụng lại nhiều lần trên mô hình."
+      ],
+      "answer": "Sự che dấu thong tin",
       "explanation": "Chưa có giải thích."
     },
     {
-      "id": "q_1783527003484_34",
+      "id": "q_1783527369116_34",
       "type": "multiple-choice",
       "difficulty": "Trung bình",
       "question": "Một lớp được mô tả là tập các đối tượng chia xẻ cùng các",
-      "answer": "Unknown",
+      "choices": [
+        "Attributes (thuộc tính), behaviour (hành vi) and operations (hành động)",
+        "Identity(đặc tính), behaviour and state (trạng thái)",
+        "Attributes, operations and relationships (mối quan hệ)",
+        "Relationships, operations and multiplicity (bản số)"
+      ],
+      "answer": "Attributes (thuộc tính), behaviour (hành vi) and operations (hành động)",
       "explanation": "Chưa có giải thích."
     },
     {
-      "id": "q_1783527003484_35",
+      "id": "q_1783527369116_35",
       "type": "multiple-choice",
       "difficulty": "Trung bình",
       "question": "Các use-cases nghiệp vụ (Business use-cases) và các tác nhân (actors) cùng mô tả :",
-      "answer": "Unknown",
+      "choices": [
+        "Các phần tử tĩnh (static elements) của công việc (work) trong tiến trình (process)",
+        "Các phần tử động (dynamic elements) của công việc (work) trong tiến trình (process)",
+        "Khung nhìn luận lý (logical view) của công việc (work) trong tiến trình (process)",
+        "Mỗi business worker trong mô hình nghiệp vụ (business model) được chuyển thành một tác nhân hệ thống (system actor) trong mô hình phân tích (analysis model)"
+      ],
+      "answer": "Các phần tử tĩnh (static elements) của công việc (work) trong tiến trình (process)",
       "explanation": "Chưa có giải thích."
     },
     {
-      "id": "q_1783527003484_37",
+      "id": "q_1783527369116_37",
       "type": "multiple-choice",
       "difficulty": "Trung bình",
       "question": "Câu phát biểu nào sau đây đúng :",
-      "answer": "Unknown",
+      "choices": [
+        "Một lớp là sự đóng gói của một đối tượng",
+        "Một lớo biểu diễn sự phân cấp cũa một đối tượng",
+        "Một lớp là một thể hiện của một đối tượng",
+        "Một lớp là một định nghĩa trừu tượng của một đối tượng"
+      ],
+      "answer": "Một lớp là sự đóng gói của một đối tượng",
       "explanation": "Chưa có giải thích."
     },
     {
-      "id": "q_1783527003484_38",
+      "id": "q_1783527369116_38",
       "type": "multiple-choice",
       "difficulty": "Trung bình",
       "question": "Tính đa hình có thể được mô tả như là :",
-      "answer": "Unknown",
+      "choices": [
+        "Che dấu nhiều cài đặt khác nhau dựa trên cùng một giao diện.",
+        "Các thuộc tính và phương thức khác nhau của các lớp con có cùng lớp cha.",
+        "Các lớp kết hợp (association class) vời ràng buộc {or}",
+        "Sự tổng quát hoá (Generalization) các lớp con thứa kế"
+      ],
+      "answer": "Che dấu nhiều cài đặt khác nhau dựa trên cùng một giao diện.",
       "explanation": "Chưa có giải thích."
     },
     {
-      "id": "q_1783527003484_39",
+      "id": "q_1783527369116_39",
       "type": "multiple-choice",
       "difficulty": "Trung bình",
       "question": "Cụm từ tốt nhất để biểu diễn mới quan hệ tổng quát hoá là :",
-      "answer": "Unknown",
+      "choices": [
+        "“Is a part of”",
+        "“Is a kind of”",
+        "“Is a replica of”",
+        "“Is composed of”"
+      ],
+      "answer": "“Is a part of”",
       "explanation": "Chưa có giải thích."
     },
     {
-      "id": "q_1783527003484_40",
+      "id": "q_1783527369116_40",
       "type": "multiple-choice",
       "difficulty": "Trung bình",
       "question": "Một lớp con thừa kế từ lớp cha các :",
-      "answer": "Unknown",
+      "choices": [
+        "Attributes, links",
+        "Attributes, operations",
+        "Attributes, operations, relationships",
+        "Relationships, operations, links"
+      ],
+      "answer": "Attributes, links",
       "explanation": "Chưa có giải thích."
     },
     {
-      "id": "q_1783527003484_41",
+      "id": "q_1783527369116_41",
       "type": "multiple-choice",
       "difficulty": "Trung bình",
       "question": "Để tổ chức các phần tử (elements) vào bên trong các nhóm (groups) ta sử dụng :",
-      "answer": "Unknown",
+      "choices": [
+        "Package",
+        "Class",
+        "Class và interface",
+        "Component"
+      ],
+      "answer": "Package",
       "explanation": "Chưa có giải thích."
     },
     {
-      "id": "q_1783527003484_42",
+      "id": "q_1783527369116_42",
       "type": "multiple-choice",
       "difficulty": "Trung bình",
       "question": "Các sơ đồ nào sau đây mô tả các hành vi động (dynamic behaviour) của hệ thống phần mềm?",
-      "answer": "Unknown",
+      "choices": [
+        "Sơ đồ lớp và sơ đồ đối tượng",
+        "Sơ đồ trạng thái và sơ đồ hoạt động",
+        "Sơ đồ thành phần và sơ đồ triển khai",
+        "Tất cả đều sai"
+      ],
+      "answer": "Sơ đồ lớp và sơ đồ đối tượng",
       "explanation": "Chưa có giải thích."
     },
     {
-      "id": "q_1783527003484_46",
+      "id": "q_1783527369116_46",
       "type": "multiple-choice",
       "difficulty": "Trung bình",
       "question": "Stereotype package có thể biểu diễn cho :",
-      "answer": "Unknown",
+      "choices": [
+        "Một giao diện",
+        "Một sơ đồ trạng thái",
+        "Một tầng kiến trúc",
+        "Một sơ đồ use-case"
+      ],
+      "answer": "Một giao diện",
       "explanation": "Chưa có giải thích."
     },
     {
-      "id": "q_1783527003484_47",
+      "id": "q_1783527369116_47",
       "type": "multiple-choice",
       "difficulty": "Trung bình",
       "question": "Đường sinh tồn (lifeline) của 1 đối tượng được trình bày trong sơ đồ :",
-      "answer": "Unknown",
+      "choices": [
+        "Sơ đồ đối tượng",
+        "Sơ đồ trạng thái",
+        "Sơ đồ tuần tự",
+        "Sơ đồ triển khai"
+      ],
+      "answer": "Sơ đồ đối tượng",
       "explanation": "Chưa có giải thích."
     },
     {
-      "id": "q_1783527003484_48",
+      "id": "q_1783527369116_48",
       "type": "multiple-choice",
       "difficulty": "Trung bình",
       "question": "Phát biểu nào sau đây không đúng ?",
-      "answer": "Unknown",
+      "choices": [
+        "Sự mô tả của các use-cases đủ để tìm và phân tích các lớp cùng các đối tượng của nó.",
+        "Có ít nhất một boundary object cho mỗi actor hay use-case pair",
+        "Có một lớp điều khiển (control class) ứng với mỗi use-case",
+        "Các đối tượng thực thể được nhận diện bởi việc xem xét các danh từ và cụm danh từ trong use- cases"
+      ],
+      "answer": "Sự mô tả của các use-cases đủ để tìm và phân tích các lớp cùng các đối tượng của nó.",
       "explanation": "Chưa có giải thích."
     },
     {
-      "id": "q_1783527003484_49",
+      "id": "q_1783527369116_49",
       "type": "multiple-choice",
       "difficulty": "Trung bình",
       "question": "Phát biểu nào sau đây đúng ?",
-      "answer": "Unknown",
+      "choices": [
+        "Không có sự hạn chế nào trên nhiều mối kết hợp (multiple associations) giữa cùng 2 lớp.",
+        "Có thể có nhiều mối kết hợp giữa cùng 2 lớp, nhưng chúng phải mang các ý nghĩa khác nhau.",
+        "Không cho phép biểu diễn nhiều mối kết hợp trên cùng 2 lớp.",
+        "Các mối kết hợp giữa cùng 2 lớp phải được tập hợp lại thành 1 mối kết hợp"
+      ],
+      "answer": "Không có sự hạn chế nào trên nhiều mối kết hợp (multiple associations) giữa cùng 2 lớp.",
       "explanation": "Chưa có giải thích."
     },
     {
-      "id": "q_1783527003484_51",
+      "id": "q_1783527369116_51",
       "type": "multiple-choice",
       "difficulty": "Trung bình",
       "question": "Phát biểu nào sau đây không đúng :",
-      "answer": "Unknown",
+      "choices": [
+        "Chỉ những public classes mới có thể được truy xuất từ những phần bên ngoài của package chứa nó.",
+        "Không tồn tại lớp của các hệ thống con (classes of a subsystem)",
+        "Các gói (Packages) ở tầng (layer) thấp hơn có thể phụ thuộc vào các gói ở tầng cao hơn.",
+        "Giai đoạn thiết kế là sự tinh chế của giai đoạn phân tích. Nó thêm vào những chi tiết cụ thể được nhận thức trong giai đoạn thiết kế."
+      ],
+      "answer": "Chỉ những public classes mới có thể được truy xuất từ những phần bên ngoài của package chứa nó.",
       "explanation": "Chưa có giải thích."
     },
     {
-      "id": "q_1783527003484_52",
+      "id": "q_1783527369116_52",
       "type": "multiple-choice",
       "difficulty": "Trung bình",
       "question": "Nếu ta muốn tổ chức các phần tử vào trong các nhóm được sử dụng lại với sự che dấu thông tin đầy đủ, ta có thể sử dụng một trong các cấu trúc nào của UML ?",
-      "answer": "Unknown",
+      "choices": [
+        "Package",
+        "Class",
+        "Class và interface",
+        "Subsystem hoặc Component"
+      ],
+      "answer": "Package",
       "explanation": "Chưa có giải thích."
     },
     {
-      "id": "q_1783527003484_53",
+      "id": "q_1783527369116_53",
       "type": "multiple-choice",
       "difficulty": "Trung bình",
       "question": "Trong giai đoạn nào của quy trình phát triển phần mềm, ta xác định chi phí và thời gian của dự án, xác định các rủi ro và môi trường hệ thống",
-      "answer": "Unknown",
+      "choices": [
+        "Khởi tạo (Inception)",
+        "Tinh chế (Elaboration)",
+        "Xây dựng (construction)",
+        "Chuyển giao (transition)"
+      ],
+      "answer": "Khởi tạo (Inception)",
       "explanation": "Chưa có giải thích."
     },
     {
-      "id": "q_1783527003484_54",
+      "id": "q_1783527369116_54",
       "type": "multiple-choice",
       "difficulty": "Trung bình",
       "question": "Trong giai đoạn nào của quy trình phát triển phần mềm, ta đánh giá độ rủi ro, các thành phần sử dụng",
-      "answer": "Unknown",
+      "choices": [
+        "Khởi tạo (Inception)",
+        "Tinh chế (Elaboration)",
+        "Xây dựng (construction)",
+        "Chuyển giao (transition)"
+      ],
+      "answer": "Khởi tạo (Inception)",
       "explanation": "Chưa có giải thích."
     },
     {
-      "id": "q_1783527003484_55",
+      "id": "q_1783527369116_55",
       "type": "multiple-choice",
       "difficulty": "Trung bình",
       "question": "Trong giai đoạn nào của quy trình phát triển phần mềm, ta xây dựng hệ thống qua quá trình gồm nhiều vòng lặp theo quy trình xoắn ốc, mỗi vòng lặp là một dự án nhỏ. Bạn sẽ quản lý tài nguyên, kiểm soát và thực hiện tối ưu hoá, hoàn thành việc phát triển các sản phẩm và các thành phần của sản phẩm, đánh giá sản phẩm cài đặt từ các tiêu chuẩn đã được thỏa thuận.",
-      "answer": "Unknown",
+      "choices": [
+        "Khởi tạo (Inception)",
+        "Tinh chế (Elaboration)",
+        "Xây dựng (construction)",
+        "Chuyển giao (transition)"
+      ],
+      "answer": "Khởi tạo (Inception)",
       "explanation": "Chưa có giải thích."
     },
     {
-      "id": "q_1783527003484_56",
+      "id": "q_1783527369116_56",
       "type": "multiple-choice",
       "difficulty": "Trung bình",
       "question": "Trong giai đoạn nào của quy trình phát triển phần mềm, ta thực hiện cài đặt hệ thống, thử nghiệm sản phẩm đã triển khai, thu thập các phản hồi từ phía người dung, bảo trì hệ thống",
-      "answer": "Unknown",
+      "choices": [
+        "Khởi tạo (Inception)",
+        "Tinh chế (Elaboration)",
+        "Xây dựng (construction)",
+        "Chuyển giao (transition)"
+      ],
+      "answer": "Khởi tạo (Inception)",
       "explanation": "Chưa có giải thích."
     },
     {
-      "id": "q_1783527003484_57",
+      "id": "q_1783527369116_57",
       "type": "multiple-choice",
       "difficulty": "Trung bình",
       "question": "Một ………….. là dãy các bước mô tả sự tương tác giữa người dung và hệ thống",
-      "answer": "Unknown",
+      "choices": [
+        "Kịch bản",
+        "Use case",
+        "Mục tiêu",
+        "Sự kiện"
+      ],
+      "answer": "Kịch bản",
       "explanation": "Chưa có giải thích."
     },
     {
-      "id": "q_1783527003484_58",
+      "id": "q_1783527369116_58",
       "type": "multiple-choice",
       "difficulty": "Trung bình",
       "question": "Sơ đồ nào mô tả các kiểu của các đối tượng và các mối quan hệ tĩnh khác nhau giữa chúng ?",
-      "answer": "Unknown",
+      "choices": [
+        "Sơ đồ lớp",
+        "Sơ đồ tương tác",
+        "Sơ đồ trạng thái",
+        "Sơ đồ hoạt động"
+      ],
+      "answer": "Sơ đồ lớp",
       "explanation": "Chưa có giải thích."
     },
     {
-      "id": "q_1783527003484_59",
+      "id": "q_1783527369116_59",
       "type": "multiple-choice",
       "difficulty": "Trung bình",
       "question": "Phát biểu nào sau đây không đúng về mối kết hợp trong sơ đồ lớp",
-      "answer": "Unknown",
+      "choices": [
+        "Mối kết hợp biểu diễn các quan hệ giữa các thể hiện của các lớp",
+        "Mối kết hợp là các quy trình mà một lớp sẽ thực hiện",
+        "Mối kết hợp có thể vô hướng",
+        "Mối kết hợp có thể có cả hai hướng"
+      ],
+      "answer": "Mối kết hợp biểu diễn các quan hệ giữa các thể hiện của các lớp",
       "explanation": "Chưa có giải thích."
     },
     {
-      "id": "q_1783527003484_60",
+      "id": "q_1783527369116_60",
       "type": "multiple-choice",
       "difficulty": "Trung bình",
       "question": "Trong sơ đồ tuần tự ---------> biểu diễn :",
-      "answer": "Unknown",
+      "choices": [
+        "Thông điệp (message )",
+        "Điều kiện (condition)",
+        "Lặp (iteration)",
+        "Xóa đối tượng (deletion)"
+      ],
+      "answer": "Thông điệp (message )",
       "explanation": "Chưa có giải thích."
     },
     {
-      "id": "q_1783527003484_61",
+      "id": "q_1783527369116_61",
       "type": "multiple-choice",
       "difficulty": "Trung bình",
       "question": "Trong sơ đồ tuần tự [some_text] biểu diễn :",
-      "answer": "Unknown",
+      "choices": [
+        "Thông điệp (message )",
+        "Điều kiện (condition)",
+        "Lặp (iteration)",
+        "Xóa đối tượng (deletion)"
+      ],
+      "answer": "Thông điệp (message )",
       "explanation": "Chưa có giải thích."
     },
     {
-      "id": "q_1783527003484_62",
+      "id": "q_1783527369116_62",
       "type": "multiple-choice",
       "difficulty": "Trung bình",
       "question": "Trong sơ đồ tuần tự dấu * biểu diễn :",
-      "answer": "Unknown",
+      "choices": [
+        "aggregation",
+        "Composition",
+        "Classification",
+        "Generalization"
+      ],
+      "answer": "aggregation",
       "explanation": "Chưa có giải thích."
     },
     {
-      "id": "q_1783527003484_67",
+      "id": "q_1783527369116_67",
       "type": "multiple-choice",
       "difficulty": "Trung bình",
       "question": "Phát biểu nào sau đây đúng về mối kết hợp định tính (Qualified Associations) trên sơ đồ lớp ?",
-      "answer": "Unknown",
+      "choices": [
+        "Mối kết hợp định tính cung cấp chức năng tương tự như chỉ mục.",
+        "Đặc tính thông tin định danh (qualifier) là một thuộc tính của một lớp. Biểu tượng của nó là hình chữ nhật nhỏ kề bên class mà thực hiện việc tìm kiếm",
+        "Mối kết hợp định tính đơn giản hóa sự định hướng qua mối kết hợp phức tạp bằng cách cung cấp các khóa để thu hẹp việc lựa chọn các đối tượng kết hợp.",
+        "Các câu trên đều đúng"
+      ],
+      "answer": "Mối kết hợp định tính cung cấp chức năng tương tự như chỉ mục.",
       "explanation": "Chưa có giải thích."
     },
     {
-      "id": "q_1783527003484_68",
+      "id": "q_1783527369116_68",
       "type": "multiple-choice",
       "difficulty": "Trung bình",
       "question": "Phát biểu nào sau đây đúng về mối kết hợp định tính (Qualified Associations) trên sơ đồ lớp ?",
-      "answer": "Unknown",
+      "choices": [
+        "Mối kết hợp định tính xác định số lượng các đối tượng.có thể tham gia trong mối kết hợp",
+        "Một lớp kết hợp đóng gói thông tin về mối kết hợp",
+        "Một lớp kết hợp được nối đến mối kết hợp bằng đường đứt nét. (dashed line)",
+        "Tất cả các câu trên đều đúng"
+      ],
+      "answer": "Mối kết hợp định tính xác định số lượng các đối tượng.có thể tham gia trong mối kết hợp",
       "explanation": "Chưa có giải thích."
     },
     {
-      "id": "q_1783527003484_70",
+      "id": "q_1783527369116_70",
       "type": "multiple-choice",
       "difficulty": "Trung bình",
       "question": "Phát biểu nào sau đây đúng về lớp kết hợp trên sơ đồ lớp ?",
-      "answer": "Unknown",
+      "choices": [
+        "Một lớp kết hợp được nối đến mối kết hợp bằng đường liền nét. (solid line)",
+        "Một lớp kết hợp được nối đến mối kết hợp bằng đường chấm .(dotted line)",
+        "Một lớp kết hợp chứa các luật bắt buộc phải đảm bảo các ràng buộc của mối quan hệ.",
+        "Không có phát biểu nào đúng"
+      ],
+      "answer": "Một lớp kết hợp được nối đến mối kết hợp bằng đường liền nét. (solid line)",
       "explanation": "Chưa có giải thích."
     },
     {
-      "id": "q_1783527003484_71",
+      "id": "q_1783527369116_71",
       "type": "multiple-choice",
       "difficulty": "Trung bình",
       "question": "Phát biểu nào sau đây đúng về sơ đồ trạng thái ?",
-      "answer": "Unknown",
+      "choices": [
+        "Sơ đồ trạng thái mô tả tất cả các trạng thái mà một đối tượng có thể có và sự chuyển dịch của các trạng thái như là kết quả của các sự kiện.",
+        "Sơ đồ trạng thái mô tả hành vi của nhiều đối tượng trong cùng một Use Case.",
+        "Sơ đồ trạng thái mô tả các loại đối tượng trong hệ thống và các loại mối quan hệ khác nhau giữa chúng.",
+        "Sơ đồ trạng thái thể hiện nhiểu thành phần trong hệ thống và các phụ thuộc của chúng."
+      ],
+      "answer": "Sơ đồ trạng thái mô tả tất cả các trạng thái mà một đối tượng có thể có và sự chuyển dịch của các trạng thái như là kết quả của các sự kiện.",
       "explanation": "Chưa có giải thích."
     },
     {
-      "id": "q_1783527003484_72",
+      "id": "q_1783527369116_72",
       "type": "multiple-choice",
       "difficulty": "Trung bình",
       "question": "Hoàn chỉnh câu sau về thông tin (artifact) trong sơ đồ trạng thái : Một ………. liên quan đến một sự chuyển dịch và được xem như một tiến trình xuất hiện nhanh và không bị ngắt bởi một số sự kiện.",
-      "answer": "Unknown",
+      "choices": [
+        "Hành động (Action)",
+        "Hoạt động (Activity)",
+        "Điều kiện che chắn (Guard)",
+        "Sự kiện (Event)"
+      ],
+      "answer": "Hành động (Action)",
       "explanation": "Chưa có giải thích."
     },
     {
-      "id": "q_1783527003484_73",
+      "id": "q_1783527369116_73",
       "type": "multiple-choice",
       "difficulty": "Trung bình",
       "question": "Hoàn chỉnh câu sau về thông tin (artifact) trong sơ đồ trạng thái : Một ………. liên quan với một trạng thái và có thể diễn ra trong thời gian dài. Nó có thể bị ngắt bởi một số sự kiện.",
-      "answer": "Unknown",
+      "choices": [
+        "Hành động (Action)",
+        "Hoạt động (Activity)",
+        "Điều kiện che chắn (Guard)",
+        "Sự kiện (Event)"
+      ],
+      "answer": "Hành động (Action)",
       "explanation": "Chưa có giải thích."
     },
     {
-      "id": "q_1783527003484_75",
+      "id": "q_1783527369116_75",
       "type": "multiple-choice",
       "difficulty": "Trung bình",
       "question": "Mệnh đề nào sau đây đúng về sơ đồ trạng thái ?",
-      "answer": "Unknown",
+      "choices": [
+        "Sơ đồ trạng thái là cách biểu diễn tốt hành vi của một đối tượng qua nhiều Use Cases.",
+        "Sơ đồ trạng thái là cách biểu diễn tốt hành vi của nhiều đối tượng qua nhiều Use Cases.",
+        "Sơ đồ trạng thái là cách biểu diễn tốt hành vi của nhiều đối tượng trong một Use Cases.",
+        "Sơ đồ trạng thái là cách biểu diễn tốt dãy các hành động cho nhiều đối tượng và Use Cases."
+      ],
+      "answer": "Sơ đồ trạng thái là cách biểu diễn tốt hành vi của một đối tượng qua nhiều Use Cases.",
       "explanation": "Chưa có giải thích."
     },
     {
-      "id": "q_1783527003484_76",
+      "id": "q_1783527369116_76",
       "type": "multiple-choice",
       "difficulty": "Trung bình",
       "question": "Hoàn chỉnh câu sau : ……… là cách biểu diễn tốt để mô tả hành vi của một đối tượng qua nhiều Use Cases. Nó rất tốt để mô tả hành vi liên quan đến một số đối tượng hợp tác với nhau.",
-      "answer": "Unknown",
+      "choices": [
+        "Sơ đồ trạng thái (State Diagrams)",
+        "Sơ đồ tuần tự (Sequence Diagrams)",
+        "Sơ đồ hợp tác (Collaboration Diagrams)",
+        "Sơ đồ hoạt động (Activity Diagrams)"
+      ],
+      "answer": "Sơ đồ trạng thái (State Diagrams)",
       "explanation": "Chưa có giải thích."
     },
     {
-      "id": "q_1783527003484_77",
+      "id": "q_1783527369116_77",
       "type": "multiple-choice",
       "difficulty": "Trung bình",
       "question": "Hoàn chỉnh câu sau : ……… là cách biểu diễn tốt để mô tả hành vi của nhiều đối tượng trong một Use Case",
-      "answer": "Unknown",
+      "choices": [
+        "Sơ đồ trạng thái (State Diagrams)",
+        "Sơ đồ tương tác (Interaction Diagrams)",
+        "Sơ đồ hoạt động (Activity Diagrams)",
+        "Sơ đồ lớp (Class Diagrams)"
+      ],
+      "answer": "Sơ đồ trạng thái (State Diagrams)",
       "explanation": "Chưa có giải thích."
     },
     {
-      "id": "q_1783527003484_78",
+      "id": "q_1783527369116_78",
       "type": "multiple-choice",
       "difficulty": "Trung bình",
       "question": "Hoàn chỉnh câu sau : ……… là cách biểu diễn tốt để thể hiện dãy các hành động cho nhiều đối tượng và Use Case",
-      "answer": "Unknown",
+      "choices": [
+        "Sơ đồ trạng thái (State Diagrams)",
+        "Sơ đồ tuần tự (Sequence Diagrams)",
+        "Sơ đồ hợp tác (Collaboration Diagrams)",
+        "Sơ đồ hoạt động (Activity Diagrams)"
+      ],
+      "answer": "Sơ đồ trạng thái (State Diagrams)",
       "explanation": "Chưa có giải thích."
     },
     {
-      "id": "q_1783527003484_79",
+      "id": "q_1783527369116_79",
       "type": "multiple-choice",
       "difficulty": "Trung bình",
       "question": "Ký hiện * trong UML biểu diễn :",
-      "answer": "Unknown",
+      "choices": [
+        "Biểu diễn các bước lặp lại mà không có cấu trúc vòng lặp",
+        "Nó chỉ ra rằng các hoạt động được thực hiện nhiều lần",
+        "Biểu diễn nhiều hoạt động cần cùng được thực hiện trong một vài trạng thái.",
+        "Câu a và b đúng"
+      ],
+      "answer": "Biểu diễn các bước lặp lại mà không có cấu trúc vòng lặp",
       "explanation": "Chưa có giải thích."
     },
     {
-      "id": "q_1783527003484_80",
+      "id": "q_1783527369116_80",
       "type": "multiple-choice",
       "difficulty": "Trung bình",
       "question": "Sơ đồ hoạt động được sử dụng trong những tình huống sau :",
-      "answer": "Unknown",
+      "choices": [
+        "Phân tích một use case",
+        "Biểu diễn hành vi với cấu trúc điều khiển. Sơ đồ hoạt động có thể biểu diễn nhiều đối tượng trong một use case.",
+        "Biểu diễn cấu trúc tĩnh của các khái niệm, các loại và các lớp",
+        "Giúp nắm được mục đích cơ bản của lớp, tốt cho việc khám phá việc cài đặt use case như thế nào."
+      ],
+      "answer": "Phân tích một use case",
       "explanation": "Chưa có giải thích."
     },
     {
-      "id": "q_1783527003484_84",
+      "id": "q_1783527369116_84",
       "type": "multiple-choice",
       "difficulty": "Trung bình",
       "question": "Mục đích của sơ đồ lớp là :",
-      "answer": "Unknown",
+      "choices": [
+        "Biểu diễn hành vi với cấu trúc điều khiển. Sơ đồ hoạt động có thể biểu diễn nhiều đối tượng trong một use case.",
+        "Biểu diễn cấu trúc tĩnh của các khái niệm, các loại và các lớp",
+        "Giúp nắm được mục đích cơ bản của lớp, tốt cho việc khám phá việc cài đặt use case như thế nào.",
+        "Biểu diễn cách bố trí các thành phần trên các nút phần cứng"
+      ],
+      "answer": "Biểu diễn hành vi với cấu trúc điều khiển. Sơ đồ hoạt động có thể biểu diễn nhiều đối tượng trong một use case.",
       "explanation": "Chưa có giải thích."
     },
     {
-      "id": "q_1783527003484_85",
+      "id": "q_1783527369116_85",
       "type": "multiple-choice",
       "difficulty": "Trung bình",
       "question": "Mục đích của sơ đồ triển khai là :",
-      "answer": "Unknown",
+      "choices": [
+        "Biểu diễn hành vi với cấu trúc điều khiển. Sơ đồ hoạt động có thể biểu diễn nhiều đối tượng trong một use case.",
+        "Biểu diễn cấu trúc tĩnh của các khái niệm, các loại và các lớp",
+        "Giúp nắm được mục đích cơ bản của lớp, tốt cho việc khám phá việc cài đặt use case như thế nào.",
+        "Biểu diễn cách bố trí các thành phần trên các nút phần cứng"
+      ],
+      "answer": "Biểu diễn hành vi với cấu trúc điều khiển. Sơ đồ hoạt động có thể biểu diễn nhiều đối tượng trong một use case.",
       "explanation": "Chưa có giải thích."
     },
     {
-      "id": "q_1783527003484_86",
+      "id": "q_1783527369116_86",
       "type": "multiple-choice",
       "difficulty": "Trung bình",
       "question": "Mục đích của kỹ thuật thiết kế bằng hợp đồng \"Design by Contract\" là :",
-      "answer": "Unknown",
+      "choices": [
+        "Cung cấp định nghĩa chặt chẽ mục đích các hành vi và trạng thái hợp lệ của lớp.",
+        "Biểu diễn các đối tượng cộng tác trong một use case như thế nào.",
+        "Biểu diễn nhóm các lớp và các phụ thuộc giữa chúng",
+        "Cung cấp một vài kỹ thuật hữu ích cho phân tích, thiết kế và viết mã."
+      ],
+      "answer": "Cung cấp định nghĩa chặt chẽ mục đích các hành vi và trạng thái hợp lệ của lớp.",
       "explanation": "Chưa có giải thích."
     },
     {
-      "id": "q_1783527003484_87",
+      "id": "q_1783527369116_87",
       "type": "multiple-choice",
       "difficulty": "Trung bình",
       "question": "Mục đích của sơ đồ tương tác (Interaction Diagram) là :",
-      "answer": "Unknown",
+      "choices": [
+        "Design, coding, testing, integration",
+        "Analysis, design, coding, testing",
+        "Design, coding",
+        "Cung cấp một vài kỹ thuật hữu ích cho phân tích, thiết kế và viết mã."
+      ],
+      "answer": "Design, coding, testing, integration",
       "explanation": "Chưa có giải thích."
     },
     {
-      "id": "q_1783527003484_92",
+      "id": "q_1783527369116_92",
       "type": "multiple-choice",
       "difficulty": "Trung bình",
-      "question": "Hoàn chỉnh các mệnh đề sau về mối quan hệ giữa các Use Cases",
-      "answer": "Unknown",
+      "question": "Hoàn chỉnh các mệnh đề sau về mối quan hệ giữa các Use Cases\nSử dụng ……… khi chúng ta muốn giảm các bước trùng lặp giữa các use case, lấy những bước chung đó để tạo nên use case phụ.",
+      "choices": [
+        "Include",
+        "Generalization",
+        "Extend",
+        "Delegation"
+      ],
+      "answer": "Include",
       "explanation": "Chưa có giải thích."
     },
     {
-      "id": "q_1783527003484_93",
+      "id": "q_1783527369116_93",
       "type": "multiple-choice",
       "difficulty": "Trung bình",
-      "question": "Hoàn chỉnh các mệnh đề sau về mối quan hệ giữa các Use Cases",
-      "answer": "Unknown",
+      "question": "Hoàn chỉnh các mệnh đề sau về mối quan hệ giữa các Use Cases\nSử dụng ……… khi chúng ta muốn tạo một use case mới bằng cách thêm một số bước vào một use case có sẳn.",
+      "choices": [
+        "Include",
+        "Generalization",
+        "Extend",
+        "Delegation"
+      ],
+      "answer": "Include",
       "explanation": "Chưa có giải thích."
     },
     {
-      "id": "q_1783527003484_94",
+      "id": "q_1783527369116_94",
       "type": "multiple-choice",
       "difficulty": "Trung bình",
       "question": "Phát biểu nào sau đây đúng về use cases ?",
-      "answer": "Unknown",
+      "choices": [
+        "Use Cases biểu diễn một cách nhìn bên ngoài (external view) của hệ thống",
+        "Có sự tương quan giữa Use Cases và lớp bên trong hệ thống",
+        "Không có sự tương quan giữa Use Cases và lớp bên trong hệ thống",
+        "Câu a và c đúng"
+      ],
+      "answer": "Use Cases biểu diễn một cách nhìn bên ngoài (external view) của hệ thống",
       "explanation": "Chưa có giải thích."
     },
     {
-      "id": "q_1783527003484_95",
+      "id": "q_1783527369116_95",
       "type": "multiple-choice",
       "difficulty": "Trung bình",
       "question": "Phát biểu nào sau đây đúng về Sơ đồ tuần tự ?",
-      "answer": "Unknown",
+      "choices": [
+        "Mỗi thông điệp được biểu diễn bằng một mũi tên giữa đường sống của hai đối tượng.",
+        "Mỗi thông điệp được biểu diễn bằng một đường thẳng đứng đứt nét",
+        "Mỗi thông điệp phải có nhãn với tên thông điệp đi kèm một con số",
+        "Câu a và c đúng"
+      ],
+      "answer": "Mỗi thông điệp được biểu diễn bằng một mũi tên giữa đường sống của hai đối tượng.",
       "explanation": "Chưa có giải thích."
     },
     {
-      "id": "q_1783527003484_96",
+      "id": "q_1783527369116_96",
       "type": "multiple-choice",
       "difficulty": "Trung bình",
       "question": "Sơ đồ nào biểu diễn các thể hiện trong một hệ thống tại một thời điểm ?",
-      "answer": "Unknown",
+      "choices": [
+        "Sơ đồ đối tượng (Object Diagram)",
+        "Sơ đồ lớp (Class Diagram)",
+        "Sơ đồ thành phần (Component Diagram)",
+        "Sơ đồ hệ thống (System Diagram)"
+      ],
+      "answer": "Sơ đồ đối tượng (Object Diagram)",
       "explanation": "Chưa có giải thích."
     },
     {
-      "id": "q_1783527003484_97",
+      "id": "q_1783527369116_97",
       "type": "multiple-choice",
       "difficulty": "Trung bình",
       "question": "Phát biểu nào đúng về sơ đồ hoạt động ?",
-      "answer": "Unknown",
+      "choices": [
+        "Một phân nhánh có một hoạt động đến và nhiều hoạt động đi theo điều kiện.",
+        "Một sự hợp nhất đồng bộ của các luồng đồng thời.",
+        "Cả 2 câu trên đều đúng",
+        "Cả 2 câu trên đều sai"
+      ],
+      "answer": "Một phân nhánh có một hoạt động đến và nhiều hoạt động đi theo điều kiện.",
       "explanation": "Chưa có giải thích."
     },
     {
-      "id": "q_1783527003484_98",
+      "id": "q_1783527369116_98",
       "type": "multiple-choice",
       "difficulty": "Trung bình",
       "question": "Phát biểu nào đúng về sơ đồ thành phần (Component Diagrams) ?",
-      "answer": "Unknown",
+      "choices": [
+        "Một thành phần có thể có nhiều hơn một giao diện, nó trình bày một đơn vị (module) vật lý của mã lệnh",
+        "Một thành phần không thể có nhiều hơn một giao diện.",
+        "Một thành phần trình bày vài loại của đơn vị phần cứng",
+        "Câu a và c đúng"
+      ],
+      "answer": "Một thành phần có thể có nhiều hơn một giao diện, nó trình bày một đơn vị (module) vật lý của mã lệnh",
       "explanation": "Chưa có giải thích."
     },
     {
-      "id": "q_1783527003484_99",
+      "id": "q_1783527369116_99",
       "type": "multiple-choice",
       "difficulty": "Trung bình",
       "question": "Phát biểu nào đúng về Use Cases ?",
-      "answer": "Unknown",
+      "choices": [
+        "Những yêu cầu là những ghi nhận trước tiên trong Use Cases",
+        "Công việc của một lần lặp được xác định bởi việc chọn lựa một số kịch bản Use Cases hay toàn bộ Use Cases.",
+        "Công việc của một lần lặp được xác định bởi việc chọn lựa một số đặc trưng từ danh sách các đặc trưng hơn là việc chọn lựa một số kịch bản Use Cases hay toàn bộ Use Cases.",
+        "Câu a và b đúng"
+      ],
+      "answer": "Những yêu cầu là những ghi nhận trước tiên trong Use Cases",
       "explanation": "Chưa có giải thích."
     },
     {
-      "id": "q_1783527003484_100",
+      "id": "q_1783527369116_100",
       "type": "multiple-choice",
       "difficulty": "Trung bình",
       "question": "Kết quả của giai đoạn tinh chế (Elaboration phase) là :",
-      "answer": "Unknown",
+      "choices": [
+        "Các yêu cầu chức năng (Use Cases)",
+        "Nền tảng cho việc đánh giá chi phí đến cuối dự án.",
+        "Các yêu cầu phi chức năng trong bảng chi tiết bổ sung.",
+        "Tất cả các câu trên"
+      ],
+      "answer": "Các yêu cầu chức năng (Use Cases)",
       "explanation": "Chưa có giải thích."
     },
     {
-      "id": "q_1783527003484_101",
+      "id": "q_1783527369116_101",
       "type": "multiple-choice",
       "difficulty": "Trung bình",
       "question": "Các khái niệm về phạm vi hệ thống được tìm thấy trong :",
-      "answer": "Unknown",
+      "choices": [
+        "Use Cases",
+        "Sơ đồ Use Cases",
+        "Sơ đồ tương tác (Interaction Diagrams)",
+        "Sơ đồ tuần tự (Sequence Diagrams)"
+      ],
+      "answer": "Use Cases",
       "explanation": "Chưa có giải thích."
     },
     {
-      "id": "q_1783527003484_102",
+      "id": "q_1783527369116_102",
       "type": "multiple-choice",
       "difficulty": "Trung bình",
       "question": "Sơ đồ nào là thông tin (artifact) hữu ích nhất trong việc phân tích để tìm ra các hành vi của phần mềm được xem như là hộp đen ?",
-      "answer": "Unknown",
+      "choices": [
+        "Sơ đồ tuần tự hệ thống (System Sequence Diagram)",
+        "Sơ đồ lớp quan niệm (Conceptual Class Diagram)",
+        "Sơ đồ triển khai (Deployment Diagram)",
+        "Sơ đồ thành phần (Component Diagram)"
+      ],
+      "answer": "Sơ đồ tuần tự hệ thống (System Sequence Diagram)",
       "explanation": "Chưa có giải thích."
     }
   ]
