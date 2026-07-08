@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Question, QuestionBank } from "@/types";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Trash2 } from "lucide-react";
+import { Trash2, Edit2 } from "lucide-react";
 import { storage } from "@/lib/storage";
 import { useModal } from "@/components/ui/modal-provider";
 
@@ -13,6 +13,7 @@ interface Props {
 
 export function QuestionManager({ bank, onUpdate }: Props) {
   const [isAdding, setIsAdding] = useState(false);
+  const [editingQId, setEditingQId] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
   const { showConfirm, showAlert } = useModal();
   
@@ -51,6 +52,26 @@ export function QuestionManager({ bank, onUpdate }: Props) {
     await saveBank(updated);
   };
 
+  const handleEdit = (q: Question) => {
+    setEditingQId(q.id);
+    setQuestionText(q.question);
+    setImageUrl(q.imageUrl || "");
+    setChoicesText(q.choices ? q.choices.join("\n") : "");
+    setAnswer(Array.isArray(q.answer) ? q.answer.join(", ") : q.answer);
+    setExplanation(q.explanation || "");
+    setIsAdding(true);
+  };
+
+  const handleCancelEdit = () => {
+    setEditingQId(null);
+    setQuestionText("");
+    setImageUrl("");
+    setChoicesText("");
+    setAnswer("");
+    setExplanation("");
+    setIsAdding(false);
+  };
+
   const handleAdd = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!questionText.trim()) return await showAlert("Vui lòng nhập câu hỏi");
@@ -59,7 +80,7 @@ export function QuestionManager({ bank, onUpdate }: Props) {
     const choices = choicesText.split("\n").map(s => s.trim()).filter(Boolean);
     
     const newQ: Question = {
-      id: `q_${Date.now()}`,
+      id: editingQId || `q_${Date.now()}`,
       type: "multiple-choice",
       difficulty: "Dễ",
       question: questionText.trim(),
@@ -69,29 +90,31 @@ export function QuestionManager({ bank, onUpdate }: Props) {
       explanation: explanation.trim() || undefined
     };
 
-    const updated = { ...bank, questions: [...bank.questions, newQ] };
+    let updatedQuestions;
+    if (editingQId) {
+      updatedQuestions = bank.questions.map(q => q.id === editingQId ? newQ : q);
+    } else {
+      updatedQuestions = [...bank.questions, newQ];
+    }
+
+    const updated = { ...bank, questions: updatedQuestions };
     await saveBank(updated);
     
-    // Reset form
-    setQuestionText("");
-    setImageUrl("");
-    setChoicesText("");
-    setAnswer("");
-    setExplanation("");
-    setIsAdding(false);
+    handleCancelEdit();
   };
 
   return (
     <div className="space-y-6">
       <div className="flex justify-between items-center">
         <h3 className="text-lg font-medium">Danh sách câu hỏi ({bank.questions.length})</h3>
-        <Button onClick={() => setIsAdding(!isAdding)} variant={isAdding ? "outline" : "default"}>
+        <Button onClick={() => isAdding ? handleCancelEdit() : setIsAdding(true)} variant={isAdding ? "outline" : "default"}>
           {isAdding ? "Hủy" : "+ Thêm câu hỏi"}
         </Button>
       </div>
 
       {isAdding && (
         <div className="bg-[#f4f5f5]/50 border border-black/5 rounded-xl p-5 shadow-sm">
+          <h4 className="font-medium text-[14px] mb-4 text-foreground">{editingQId ? "Sửa câu hỏi" : "Thêm câu hỏi mới"}</h4>
           <form onSubmit={handleAdd} className="space-y-4">
             <div>
               <label className="block text-[13px] font-medium mb-1.5 text-foreground">Câu hỏi *</label>
@@ -175,9 +198,14 @@ export function QuestionManager({ bank, onUpdate }: Props) {
                 </div>
               )}
             </div>
-            <Button variant="ghost" size="icon" className="opacity-0 group-hover:opacity-100 text-muted hover:text-error hover:bg-error/10 transition-all h-7 w-7" onClick={() => handleDelete(q.id)} disabled={loading}>
-              <Trash2 className="h-3.5 w-3.5" />
-            </Button>
+            <div className="flex opacity-0 group-hover:opacity-100 transition-all">
+              <Button variant="ghost" size="icon" className="text-muted hover:text-accent hover:bg-accent/10 h-7 w-7" onClick={() => handleEdit(q)} disabled={loading}>
+                <Edit2 className="h-3.5 w-3.5" />
+              </Button>
+              <Button variant="ghost" size="icon" className="text-muted hover:text-error hover:bg-error/10 h-7 w-7" onClick={() => handleDelete(q.id)} disabled={loading}>
+                <Trash2 className="h-3.5 w-3.5" />
+              </Button>
+            </div>
           </div>
         ))}
         {bank.questions.length === 0 && <p className="text-center text-[13px] text-muted py-12">Chưa có câu hỏi nào.</p>}
